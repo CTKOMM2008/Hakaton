@@ -6,5 +6,5 @@ function logout() {
     localStorage.removeItem('isLoggedIn');
 
     // Redirect to the login page or home page
-    window.location.href = "/login stranica/login.html";
+    window.location.href = "/login stranica/index.html";
 }
