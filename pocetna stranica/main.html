@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" data-language="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vodič kroz Tivat</title>
+    <link rel="stylesheet" href="./main-style.css">
+</head>
+<body>
+    <header>
+        <div class="lijevo">
+            <button class="dugmeNalog" onclick="toggleLeftDropdown()">
+                <img src="/slike/icons8-person-64.png" alt="" class="slikaNalog">
+            </button>
+
+            <div class="lijeviDropdown" id="lijeviDropdown">
+                <button onclick="logout()">
+                    <span data-lang="me">Odjavi se</span>
+                    <span data-lang="en">Log out</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="sredina">
+            <div class="vremenskaPrognoza" id="weatherIcon" onclick="goToWeather()" style="display: none;">
+                <img src="/ZaVrijeme/cloud-sun.svg" alt="">
+            </div>
+            
+            <h1 id="naslov1">
+                <span data-lang="me">Vodič kroz Tivat</span>
+                <span data-lang="en">Guide through Tivat</span>
+            </h1>
+
+            <button class="crnogorski" id="crnogorski" onclick="promijeniCrnogorski()">
+                <img src="/slike/Flag_of_Montenegro_(vertical).svg.png" alt="">
+            </button>
+
+            <button id="engleski" onclick="promijeniEngleski()">
+                <img src="/slike/1000_F_589649072_8cYn962oBUOGweawNfNcgPHfimA4JkzY.jpg" alt="">
+            </button>
+        </div>
+        
+        <div class="desno">
+            <button class="dugmeMenu" onclick="toggleRightDropdown()">
+                <img src="/slike/viber_image_2024-10-09_19-21-03-724.png" alt="">
+            </button>
+
+            <div class="desniDropdown" id="desniDropdown">
+                <button onclick="window.location.href='main.html'">
+                    <span data-lang="me">Početna</span>
+                    <span data-lang="en">Home</span>
+                </button>
+                <button onclick="goToWeather()">
+                    <span data-lang="me">Vremenska prognoza</span>
+                    <span data-lang="en">Weather Forecast</span>
+                </button>
+                <button onclick="doIstorija()">
+                    <span data-lang="me">Istorija</span>
+                    <span data-lang="en">History</span>
+                </button>
+
+                <button onclick="window.location.href='/kartice/smjestaj/smjestaj.html'">
+                    <span data-lang="me">Smještaj</span>
+                    <span data-lang="en">Accommodation</span>
+                </button>
+                <!-- Add other navigation options here -->
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="opsteInformacije">
+            <div class="containerParagraf">
+                <h1 id="naslov2">
+                    <span data-lang="me">Tivat</span>
+                    <span data-lang="en">Tivat</span>
+                </h1>
+                <p id="paragraf1">
+                    <span data-lang="me">Tivat je grad i sjedište istoimene opštine u Crnoj Gori, u Boki kotorskoj. Prema popisu iz 2023 imao je oko 17.000 stanovnika.</span>
+                    <span data-lang="en">Tivat is a town and the administrative center of the same-named municipality in Montenegro, located in the Bay of Kotor. According to the 2023 census, it had about 17,000 inhabitants.</span>
+                </p>
+    
+                <p id="paragraf2">
+                    <span data-lang="me">Opština Tivat se prostire od Lepetana na zapadu, do Radanovića na istoku, na sjeveru do vrha Vrmca, Svetog Ilije i do Luštice na jugu.</span>
+                    <span data-lang="en">The municipality of Tivat extends from Lepetane in the west to Radanovići in the east, north to the top of Vrmac and Sveti Ilija, and to Luštica in the south.</span>
+                </p>
+    
+                <p id="paragraf3">
+                    <span data-lang="me">Neka od naseljenih mjesta u Tivtu su: Lepetani, Gornja Lastva, Donja Lastva, Seljanovo, Tivat, Mrčevac, Gradiošnica, Radovići, Đuraševići</span>
+                    <span data-lang="en">Some of the populated places in Tivat include: Lepetane, Gornja Lastva, Donja Lastva, Seljanovo, Tivat, Mrčevac, Gradiošnica, Radovići, Đuraševići.</span>
+                </p>
+            </div>
+    
+            <div class="containerSlika">
+                <img src="/slike/plaza-hotela-palma.jpg" alt="">
+            </div>
+        </div>
+
+        <h1 class="nudi" id="naslov3">
+            <span data-lang="me">Stvari koje možete istražiti u Tivtu:</span>
+            <span data-lang="en">Things you can explore in Tivat:</span>
+        </h1>
+
+        <div class="kartice">
+            
+            <div class="pr" onclick="doIstorija()">
+                <img src="/slike/istorija2.jpg" alt="">
+                <h1 id="kartica1Naslov">
+                    <span data-lang="me">Istorija</span>
+                    <span data-lang="en">History</span>
+                </h1>
+            </div>
+    
+            <div class="dr" onclick="doKultura()">
+                <img src="/slike/kultura.jpg" alt="">
+                <h1 id="kartica2Naslov">
+                    <span data-lang="me">Kultura</span>
+                    <span data-lang="en">Culture</span>
+                </h1>
+            </div>
+    
+            <div class="tr" onclick="doGastronomija()">
+                <img src="/slike/hrana.jpg" alt="">
+                <h1 id="kartica3Naslov">
+                    <span data-lang="me">Gastronomija</span>
+                    <span data-lang="en">Gastronomy</span>
+                </h1>
+            </div>
+
+            <div class="ct" onclick="doPriroda()">
+                <img src="/slike/priroda1.jpg" alt="">
+                <h1 id="kartica4Naslov">
+                    <span data-lang="me">Priroda</span>
+                    <span data-lang="en">Nature</span>
+                </h1>
+            </div>
+
+            <div class="pt" onclick="doNautika()">
+                <img src="/slike/nautika.jpg" alt="">
+                <h1 id="kartica5Naslov">
+                    <span data-lang="me">Nautika</span>
+                    <span data-lang="en">Nautics</span>
+                </h1>
+            </div>
+                
+            <div class="ss" onclick="doSport()">
+                <img src="/slike/sport.jpg" alt="">
+                <h1 id="kartica6Naslov">
+                    <span data-lang="me">Sport</span>
+                    <span data-lang="en">Sport</span>
+                </h1>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            <span data-lang="me">&copy; Mario Matijević i Matija Milanović</span>
+            <span data-lang="en">&copy; Mario Matijević and Matija Milanović</span>
+        </p>
+        <p>
+            <span data-lang="me">Kontakt: example@gmail.com</span>
+            <span data-lang="en">Contact: example@gmail.com</span>
+        </p>
+    </footer>
+
+    <!-- JavaScript files -->
+    <script src="/js funkcije/jezik.js"></script>
+    <script src="main.js"></script>
+    <script src="/js funkcije/desniDropdown.js"></script>
+    <script src="/js funkcije/lijeviDropdown.js"></script>
+    <script src="/js funkcije/linkovi.js"></script>
+    <script src="/js funkcije/logout.js"></script>
+    <script src="/login stranica/logout.js"></script>
+
+</body>
+</html>

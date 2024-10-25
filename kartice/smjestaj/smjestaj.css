@@ -1,0 +1,226 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding-top: 80px;
+}
+
+/* Header Styles */
+/* Same as in main-style.css */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50;
+    padding: 10px 20px;
+}
+
+header .lijevo, header .sredina, header .desno {
+    display: flex;
+    align-items: center;
+}
+
+.dugmeNalog, .dugmeMenu, .crnogorski, #engleski {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.slikaNalog, .vremenskaPrognoza img, .crnogorski img, #engleski img, .dugmeMenu img {
+    width: 30px;
+    height: 30px;
+}
+
+#naslov1 {
+    color: #fff;
+    margin: 0 20px;
+    font-size: 1.5rem;
+}
+
+#naslovx{
+    margin-bottom: 1rem;
+}
+
+.lijeviDropdown, .desniDropdown {
+    position: absolute;
+    background-color: #34495e;
+    display: none;
+    flex-direction: column;
+    min-width: 100px;
+    border-radius: 5px;
+    top: 60px;
+    z-index: 100;
+}
+
+.lijeviDropdown.show, .desniDropdown.show {
+    display: flex;
+}
+
+.lijeviDropdown button, .desniDropdown button {
+    padding: 10px;
+    background: none;
+    border: none;
+    color: #fff;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+}
+
+.lijeviDropdown button:hover, .desniDropdown button:hover {
+    background-color: #3d566e;
+}
+
+/* Main Styles */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.opsteInformacije {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.containerParagraf {
+    flex: 1;
+    min-width: 300px;
+}
+
+.containerParagraf h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.containerParagraf p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.containerSlika {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.containerSlika img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.spomenici {
+    margin-top: 40px;
+}
+
+.opstiNaslov {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.milanSergej, .paliBorci, .sidro, .brigada, .rodoljubi {
+    margin-bottom: 40px;
+}
+
+.milanSergej h2, .paliBorci h2, .sidro h2, .brigada h2, .rodoljubi h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.msm, .paliBorcix, .sidrox, .brigadax, .rodoljubix {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.msm img, .paliBorcix img, .sidrox img, .brigadax img, .rodoljubix img {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.msp, .paragraf3, .paragraf4, .paragraf5, .paragraf6 {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+.msp h1, .paragraf3 h1, .paragraf4 h1, .paragraf5 h1, .paragraf6 h1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.msp p, .paragraf3 p, .paragraf4 p, .paragraf5 p, .paragraf6 p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.mapButton {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mapButton:hover {
+    background-color: #1a252f;
+}
+
+.mapContainer {
+    display: none;
+    margin-top: 20px;
+}
+
+.mapContainer iframe {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sredina {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .opsteInformacije, .msm, .paliBorcix, .sidrox, .brigadax, .rodoljubix {
+        flex-direction: column;
+    }
+
+    .containerSlika, .msm img, .paliBorcix img, .sidrox img, .brigadax img, .rodoljubix img {
+        margin-bottom: 20px;
+    }
+}

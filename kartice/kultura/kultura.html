@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en" data-language="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kultura</title>
+    <link rel="stylesheet" href="./kultura.css">
+</head>
+<body>
+    <header>
+        <div class="lijevo">
+            <button class="dugmeNalog" onclick="toggleLeftDropdown()">
+                <img src="/slike/icons8-person-64.png" alt="" class="slikaNalog">
+            </button>
+
+            <div class="lijeviDropdown" id="lijeviDropdown">
+                <button onclick="logout()">
+                    <span data-lang="me">Odjavi se</span>
+                    <span data-lang="en">Log out</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="sredina">
+            <div class="vremenskaPrognoza" id="weatherIcon" onclick="goToWeather()" style="display: none;">
+                <img src="/ZaVrijeme/cloud-sun.svg" alt="">
+            </div>
+            
+            <h1 id="naslov1">
+                <span data-lang="me">Vodič kroz Tivat</span>
+                <span data-lang="en">Guide through Tivat</span>
+            </h1>
+
+            <button class="crnogorski" id="crnogorski" onclick="promijeniCrnogorski()">
+                <img src="/slike/Flag_of_Montenegro_(vertical).svg.png" alt="">
+            </button>
+
+            <button id="engleski" onclick="promijeniEngleski()">
+                <img src="/slike/1000_F_589649072_8cYn962oBUOGweawNfNcgPHfimA4JkzY.jpg" alt="">
+            </button>
+        </div>
+        
+        <div class="desno">
+            <button class="dugmeMenu" onclick="toggleRightDropdown()">
+                <img src="/slike/viber_image_2024-10-09_19-21-03-724.png" alt="">
+            </button>
+
+            <div class="desniDropdown" id="desniDropdown">
+                <button onclick="window.location.href='/pocetna stranica/main.html'">
+                    <span data-lang="me">Početna</span>
+                    <span data-lang="en">Home</span>
+                </button>
+
+                <button onclick="window.location.href='/kartice/smjestaj/smjestaj.html'">
+                    <span data-lang="me">Smještaj</span>
+                    <span data-lang="en">Accommodation</span>
+                </button>
+                <!-- Add other navigation options if needed -->
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="opsteInformacije">
+            <div class="containerParagraf">
+                <h1 id="naslovGlavni">
+                    <span data-lang="me">Kultura</span>
+                    <span data-lang="en">Culture</span>
+                </h1>
+                <p id="paragraf1">
+                    <span data-lang="me">
+                        Kulturu naše lokalne zajednice karakteriše otvorenost prema domaćem i međunarodnom prostoru, o čemu svjedoče i brojne manifestacije koje se organizuju u Tivtu. Stanovnici, ali i gosti Tivta, mogu uživati u različitim formama kulturnog izražaja tokom cijele godine – likovne izložbe, književne večeri, muzejske postavke, filmske projekcije, muzički događaji, samo su dio dinamičnog kalendara manifestacija.
+                    </span>
+                    <span data-lang="en">
+                        The culture of our local community is characterized by openness to domestic and international spaces, as evidenced by numerous events organized in Tivat. Residents and guests of Tivat can enjoy various forms of cultural expression throughout the year—art exhibitions, literary evenings, museum displays, film screenings, musical events are just part of the dynamic event calendar.
+                    </span>
+                </p>
+            </div>
+    
+            <div class="containerSlika">
+                <img src="/slike/kultura.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="kultura">
+            <h1 class="opstiNaslov" id="opstiNaslov">
+                <span data-lang="me">Ustanove kulture:</span>
+                <span data-lang="en">Cultural Institutions:</span>
+            </h1>
+
+            <!-- Centar za kulturu Tivat -->
+            <div class="centarZaKulturu">
+                <h1 class="naslov1" id="naslovx">
+                    <span data-lang="me">Centar za kulturu Tivat:</span>
+                    <span data-lang="en">Cultural Center Tivat:</span>
+                </h1>
+                <div class="msm">
+                    <img src="/slike/kulturniCentar.jpg" alt="">
+
+                    <div class="msp">
+                        <h1 id="a">
+                            <span data-lang="me">Centar za kulturu</span>
+                            <span data-lang="en">Cultural Center</span>
+                        </h1>
+                        <p id="b">
+                            <span data-lang="me">
+                                Centar za kulturu je javna ustanova u opštini Tivat. Posjetiocima pruža gledanje filmova, predstava, izlaganja, takmičenja i mnogih drugih zanimljivih događaja.
+                            </span>
+                            <span data-lang="en">
+                                The Cultural Center is a public institution in the municipality of Tivat. It offers visitors movie screenings, plays, exhibitions, competitions, and many other interesting events.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map1')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map1" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2944.800025903402!2d18.695350576156784!3d42.43199127118627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134c3177d697c8ed%3A0x2816c7bc7428ba6e!2sCulture%20Center%20Tivat!5e0!3m2!1sen!2s!4v1729783950369!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JU Muzej i galerija Tivat -->
+            <div class="muzejGalerija">
+                <h2 id="c">
+                    <span data-lang="me">JU Muzej i galerija Tivat:</span>
+                    <span data-lang="en">Museum and Gallery Tivat:</span>
+                </h2>
+
+                <div class="paliBorcix">
+                    <img src="/slike/muzejGalerija.jpg" alt="">
+
+                    <div class="paragraf3">
+                        <h1 id="d">
+                            <span data-lang="me">Muzej i galerija</span>
+                            <span data-lang="en">Museum and Gallery</span>
+                        </h1>
+                        <p id="e">
+                            <span data-lang="me">
+                                Muzej i galerija je javna ustanova u opštini Tivat. Nalazi se u centru Tivta, u srednjovjekovnom kompleksu Buća. Pruža posjetiocima mogućnost da upoznaju bogatu kulturu Tivta kroz fascinantne izložbe i umjetnička djela.
+                            </span>
+                            <span data-lang="en">
+                                The Museum and Gallery is a public institution in the municipality of Tivat. It is located in the center of Tivat, in the medieval complex Buća. It offers visitors the opportunity to explore the rich culture of Tivat through fascinating exhibitions and artworks.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map2')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map2" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2944.83300614741!2d18.69379302615685!3d42.43128932118642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134c319d8c680d11%3A0x9d6e716012b9c72!2sPI%20Museum%20%26%20Gallery%20Tivat!5e0!3m2!1sen!2s!4v1729784793322!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="opstiNaslov">
+                <span data-lang="me">Spomenici kulture:</span>
+                <span data-lang="en">Cultural Monuments:</span>
+            </h1>
+
+            <!-- Crkva Svetog Antuna Padovanskog -->
+            <div class="sidro">
+                <h2 id="f">
+                    <span data-lang="me">Crkva Svetog Antuna Padovanskog:</span>
+                    <span data-lang="en">Church of St. Anthony of Padua:</span>
+                </h2>
+
+                <div class="sidrox">
+                    <img src="/slike/antun.jpg" alt="">
+                    <div class="paragraf4">
+                        <h1 id="g">
+                            <span data-lang="me">Sveti Antun Padovanski</span>
+                            <span data-lang="en">St. Anthony of Padua</span>
+                        </h1>
+                        <p id="h">
+                            <span data-lang="me">
+                                Crkva Sv. Antuna Padovanskog se nalazi u naselju Tripovići u Tivtu. Sagrađena je 1734. na temeljima starije građevine i od tada je glavna župna crkva Tivta. Sv. Antun Padovanski je zaštitnik Tivta i Lepetana.
+                            </span>
+                            <span data-lang="en">
+                                The Church of St. Anthony of Padua is located in the Tripovići neighborhood in Tivat. It was built in 1734 on the foundations of an older building and has since been the main parish church of Tivat. St. Anthony of Padua is the patron saint of Tivat and Lepetane.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map3')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map3" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3369.6382938794477!2d18.704628733694378!3d42.43288175565012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134c317f25e2c7fd%3A0xdf771066371e1c4d!2sSt.%20Antun%20Padovanski%20Church!5e0!3m2!1sen!2s!4v1729786245163!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Crkva Svete Ane -->
+            <div class="brigada">
+                <h2 id="i">
+                    <span data-lang="me">Crkva Svete Ane:</span>
+                    <span data-lang="en">Church of St. Anne:</span>
+                </h2>
+
+                <div class="brigadax">
+                    <img src="/slike/Screenshot (2).png" alt="">
+                    <div class="paragraf5">
+                        <h1 id="j">
+                            <span data-lang="me">Crkva Svete Ane</span>
+                            <span data-lang="en">Church of St. Anne</span>
+                        </h1>
+                        <p id="k">
+                            <span data-lang="me">
+                                Kapela Sv. Ane se nalazi pored magistralnog puta u naselju Lepetane. Vrijeme njenog nastanka u istorijskim spisima nije zabilježeno. Radi se o maloj građevini sa pravougaonom apsidom. U oltarskom prostoru ove kapele časna trpeza je prislonjena uz zid, iznad koje se nalazi crkva sv. Ane.
+                            </span>
+                            <span data-lang="en">
+                                The Chapel of St. Anne is located next to the main road in the village of Lepetane. The time of its construction is not recorded in historical documents. It is a small building with a rectangular apse. In the altar area of this chapel, the holy table is leaned against the wall, above which is the Church of St. Anne.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map4')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map4" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2943.2153402505687!2d18.68400787615857!3d42.46570857118326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134c31aefd506be5%3A0x38c6f56247b51083!2sCrkva%20Sv%20Ane!5e0!3m2!1sen!2s!4v1729785778010!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hram Svetog Save -->
+            <div class="rodoljubi">
+                <h2 id="l">
+                    <span data-lang="me">Hram Svetog Save:</span>
+                    <span data-lang="en">Temple of Saint Sava:</span>
+                </h2>
+
+                <div class="rodoljubix">
+                    <img src="/slike/svsava.jpg" alt="">
+                    <div class="paragraf6">
+                        <h1 id="m">
+                            <span data-lang="me">Crkva Svetog Save</span>
+                            <span data-lang="en">Church of Saint Sava</span>
+                        </h1>
+                        <p id="n">
+                            <span data-lang="me">
+                                Izgradnja Crkve Svetog Save u Tivtu započela je 1938. godine, a završena je 1967. Nalazi se u centru Tivta. Podignuta je u čast Svetom Savi.
+                            </span>
+                            <span data-lang="en">
+                                The construction of the Church of Saint Sava in Tivat began in 1938 and was completed in 1967. It is located in the center of Tivat. It was erected in honor of Saint Sava.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map5')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map5" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2944.7677617338927!2d18.695793076156807!3d42.43267797118619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134c3177c9109a4b%3A0x7fcf25547dd9724a!2sOrtodox%20Church%20of%20Saint%20Sava!5e0!3m2!1sen!2s!4v1729787916031!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Crkva Uspenja Presvete Bogorodice -->
+            <div class="radovici">
+                <h2 id="o">
+                    <span data-lang="me">Crkva Uspenja Presvete Bogorodice:</span>
+                    <span data-lang="en">Church of the Assumption of the Blessed Virgin Mary:</span>
+                </h2>
+
+                <div class="radovicix">
+                    <img src="/slike/presvetaBogorodica.jpg" alt="">
+                    <div class="paragraf7">
+                        <h1 id="p">
+                            <span data-lang="me">Crkva Uspenja Presvete Bogorodice</span>
+                            <span data-lang="en">Church of the Assumption of the Blessed Virgin Mary</span>
+                        </h1>
+                        <p id="q">
+                            <span data-lang="me">
+                                Stari natpisi na crkvi spominju 1843. kao godinu gradnje od braće Dabčića, a ispod rozete piše da su ista braća izgradila zvonik 1866. U odnosu na ostale crkve na Luštici, crkva je većih dimenzija.
+                            </span>
+                            <span data-lang="en">
+                                Old inscriptions on the church mention 1843 as the year of construction by the Dabčić brothers, and below the rosette it says that the same brothers built the bell tower in 1866. Compared to other churches on Luštica, this church is larger in size.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map6')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map6" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2946.3572613106935!2d18.668988076155177!3d42.39883687118925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134c31d60e1f40d1%3A0xe1bb20343624f87b!2z0KbRgNC60LLQsCDQo9GB0L_QtdGa0LAg0J_RgNC10YHQstC10YLQtSDQkdC-0LPQvtGA0L7QtNC40YbQtQ!5e0!3m2!1sen!2s!4v1729788619554!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="opstiNaslov">
+                <span data-lang="me">Kulturne manifestacije:</span>
+                <span data-lang="en">Cultural Events:</span>
+            </h1>
+
+            <!-- Tradicionalni lastovski karneval -->
+            <div class="radovici">
+                <h2 id="r">
+                    <span data-lang="me">Tradicionalni lastovski karneval:</span>
+                    <span data-lang="en">Traditional Lastva Carnival:</span>
+                </h2>
+
+                <div class="radovicix">
+                    <img src="/slike/karneval.jpg" alt="">
+                    <div class="paragraf7">
+                        <h1 id="s">
+                            <span data-lang="me">Lastovski karneval</span>
+                            <span data-lang="en">Lastva Carnival</span>
+                        </h1>
+                        <p id="t">
+                            <span data-lang="me">
+                                Održava se subotom u mjesecu februaru u tivatskoj Donjoj Lastvi. Povorka sa maskama i Karnevalom, tradicionalno iz Sedmog kvarta kreće ka mulu u Donjoj Lastvi, ispred crkve Svetog Roka, mjestu na kojem će isti biti osuđen za sve prošlogodišnje nedaće bez prava žalbe, odnosno demokratije.
+                            </span>
+                            <span data-lang="en">
+                                It is held on Saturdays in February in Tivat's Donja Lastva. The procession with masks and the Carnival traditionally starts from the Seventh Quarter towards the pier in Donja Lastva, in front of the Church of St. Roko, where it will be condemned for all last year's troubles without the right to appeal, i.e., democracy.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map7')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map7" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18910.445998628817!2d18.681966272513947!3d42.44899287117216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134c316add4f676d%3A0x57e3a64aa7a33060!2sDonja%20Lastva%2C%20Montenegro!5e0!3m2!1sen!2s!4v1729808384175!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dani magnolije -->
+            <div class="radovici">
+                <h2 id="u">
+                    <span data-lang="me">Dani magnolije:</span>
+                    <span data-lang="en">Days of Magnolia:</span>
+                </h2>
+
+                <div class="radovicix">
+                    <img src="/slike/magnolija.jpg" alt="">
+                    <div class="paragraf7">
+                        <h1 id="v">
+                            <span data-lang="me">Dani magnolije</span>
+                            <span data-lang="en">Days of Magnolia</span>
+                        </h1>
+                        <p id="w">
+                            <span data-lang="me">
+                                U okviru manifestacije „Dani magnolije” održava se tradicionalna akcija „Turistički cvijet” organizovana od strane Turističke organizacije Tivat. Akcija ima za cilj animiranje građana da daju svoj doprinos uređenju grada u hortikulturnom smislu, u susret ljetnjoj turističkoj sezoni. Akcija se otvara početkom maja, a komisija je angažovana na terenu cijele opštine Tivat sve do početka juna kada se biraju najbolji kandidati.
+                            </span>
+                            <span data-lang="en">
+                                As part of the "Days of Magnolia" event, the traditional "Tourist Flower" action is organized by the Tourist Organization of Tivat. The aim is to encourage citizens to contribute to the horticultural arrangement of the city ahead of the summer tourist season. The action opens in early May, and the commission is engaged throughout the municipality of Tivat until early June when the best candidates are selected.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map8')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map8" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4729.0459321902!2d18.694596870276055!3d42.429983683271786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134c319d2434db71%3A0x53bece9577f5dd49!2sTrg%20Magnolija%2C%20Tivat%2C%20Montenegro!5e0!3m2!1sen!2s!4v1729808930528!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Međunarodni karneval -->
+            <div class="radovici">
+                <h2 id="x">
+                    <span data-lang="me">Međunarodni karneval:</span>
+                    <span data-lang="en">International Carnival:</span>
+                </h2>
+
+                <div class="radovicix">
+                    <img src="/slike/tvkarneval.jpg" alt="">
+                    <div class="paragraf7">
+                        <h1 id="y">
+                            <span data-lang="me">Međunarodni karneval</span>
+                            <span data-lang="en">International Carnival</span>
+                        </h1>
+                        <p id="z">
+                            <span data-lang="me">
+                                Održava se u junu mjesecu i označava početak ljetnje turističke sezone. Okuplja brojne karnevalske grupe širom svijeta i traje tri dana, izdvajajući se određenim specifičnostima. Pored karnevalske povorke i centralnog događaja, zabave na gradskoj rivi Pine, organizuje se i maškarani bal na vodi i bal pod maskama za diplomatski kor.
+                            </span>
+                            <span data-lang="en">
+                                Held in June, it marks the beginning of the summer tourist season. It gathers numerous carnival groups from around the world and lasts three days, distinguished by certain specifics. In addition to the carnival parade and the main event, a party on the city promenade Pine, a masked ball on the water and a masquerade ball for the diplomatic corps are organized.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map9')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map9" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37685.76772256235!2d18.679675820683983!3d42.431969423680854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134c317e3526e0c5%3A0x7564288d7b4865c5!2sTivat%2C%20Montenegro!5e0!3m2!1sen!2s!4v1729809215244!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kulturno ljeto -->
+            <div class="radovici">
+                <h2 id="a2">
+                    <span data-lang="me">Kulturno ljeto:</span>
+                    <span data-lang="en">Cultural Summer:</span>
+                </h2>
+
+                <div class="radovicix">
+                    <img src="/slike/pozoriste.jpg" alt="">
+                    <div class="paragraf7">
+                        <h1 id="b2">
+                            <span data-lang="me">Kulturno ljeto</span>
+                            <span data-lang="en">Cultural Summer</span>
+                        </h1>
+                        <p id="c2">
+                            <span data-lang="me">
+                                Centar za kulturu Tivat organizuje najznačajniju kulturnu manifestaciju – Festival mediteranskog teatra – PURGATORIJE. Purgatorije se održavaju u ljetnjem periodu (od sredine juna do kraja avgusta). Tivatsko kulturno ljeto posebno je interesantno posljednjih godina, jer u vrijeme trajanja ovog festivala, posjetioci, među kojima je veliki broj domaćih i stranih gostiju, mogu vidjeti veoma dobre pozorišne komade i predstave, od kojih je najveći broj nastao u produkciji Centra za kulturu Tivat.
+                            </span>
+                            <span data-lang="en">
+                                The Cultural Center Tivat organizes the most significant cultural event—the Mediterranean Theater Festival—PURGATORIJE. Purgatorije is held during the summer period (from mid-June to the end of August). Tivat's cultural summer has been particularly interesting in recent years because during this festival, visitors, including a large number of domestic and foreign guests, can see very good theater plays and performances, most of which are produced by the Cultural Center Tivat.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map10')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map10" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37685.76772256235!2d18.679675820683983!3d42.431969423680854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134c317e3526e0c5%3A0x7564288d7b4865c5!2sTivat%2C%20Montenegro!5e0!3m2!1sen!2s!4v1729809215244!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            <span data-lang="me">&copy; Mario Matijević i Matija Milanović</span>
+            <span data-lang="en">&copy; Mario Matijević and Matija Milanović</span>
+        </p>
+        <p>
+            <span data-lang="me">Kontakt: example@gmail.com</span>
+            <span data-lang="en">Contact: example@gmail.com</span>
+        </p>
+    </footer>
+
+    <!-- JavaScript files -->
+    <script src="/js funkcije/jezik.js"></script>
+    <script src="kultura.js"></script>
+    <script src="/js funkcije/desniDropdown.js"></script>
+    <script src="/js funkcije/lijeviDropdown.js"></script>
+    <script src="/js funkcije/linkovi.js"></script>
+    <script src="/login stranica/logout.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('/slike/weather-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding-top: 80px;
+}
+
+/* Header Styles */
+/* Same as in other pages */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(44, 62, 80, 0.9);
+    padding: 10px 20px;
+}
+
+header .lijevo, header .sredina, header .desno {
+    display: flex;
+    align-items: center;
+}
+
+.dugmeNalog, .dugmeMenu, .crnogorski, #engleski {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.slikaNalog, .vremenskaPrognoza img, .crnogorski img, #engleski img, .dugmeMenu img {
+    width: 30px;
+    height: 30px;
+}
+
+#naslov1 {
+    color: #fff;
+    margin: 0 20px;
+    font-size: 1.5rem;
+}
+
+.lijeviDropdown, .desniDropdown {
+    position: absolute;
+    background-color: #34495e;
+    display: none;
+    flex-direction: column;
+    min-width: 150px;
+    border-radius: 5px;
+    top: 60px;
+    z-index: 100;
+}
+
+.lijeviDropdown.show, .desniDropdown.show {
+    display: flex;
+}
+
+.lijeviDropdown button, .desniDropdown button {
+    padding: 10px;
+    background: none;
+    border: none;
+    color: #fff;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+}
+
+.lijeviDropdown button:hover, .desniDropdown button:hover {
+    background-color: #3d566e;
+}
+
+/* Main Styles */
+.container {
+    max-width: 500px;
+    margin: 100px auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#locationInput {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 70%;
+}
+
+#searchButton {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    background-color: #2980b9;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+#searchButton:hover {
+    background-color: #1f6391;
+}
+
+.weather-info {
+    margin-top: 20px;
+}
+
+.weather-info h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.weather-info p {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+#nazad {
+    display: inline-block;
+    margin-top: 20px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #2980b9;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#nazad:hover {
+    background-color: #1f6391;
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgba(44, 62, 80, 0.9);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sredina {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        margin: 80px 20px;
+    }
+}

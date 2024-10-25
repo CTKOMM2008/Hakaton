@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" data-language="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport</title>
+    <link rel="stylesheet" href="./sport.css">
+</head>
+<body>
+    <header>
+        <div class="lijevo">
+            <button class="dugmeNalog" onclick="toggleLeftDropdown()">
+                <img src="/slike/icons8-person-64.png" alt="" class="slikaNalog">
+            </button>
+            <div class="lijeviDropdown" id="lijeviDropdown">
+                <button onclick="logout()">
+                    <span data-lang="me">Odjavi se</span>
+                    <span data-lang="en">Log out</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="sredina">
+            <div class="vremenskaPrognoza" id="weatherIcon" onclick="goToWeather()" style="display: none;">
+                <img src="/ZaVrijeme/cloud-sun.svg" alt="">
+            </div>
+            
+            <h1 id="naslov1">
+                <span data-lang="me">Vodič kroz Tivat</span>
+                <span data-lang="en">Guide through Tivat</span>
+            </h1>
+
+            <button class="crnogorski" id="crnogorski" onclick="promijeniCrnogorski()">
+                <img src="/slike/Flag_of_Montenegro_(vertical).svg.png" alt="">
+            </button>
+
+            <button id="engleski" onclick="promijeniEngleski()">
+                <img src="/slike/1000_F_589649072_8cYn962oBUOGweawNfNcgPHfimA4JkzY.jpg" alt="">
+            </button>
+        </div>
+        
+        <div class="desno">
+            <button class="dugmeMenu" onclick="toggleRightDropdown()">
+                <img src="/slike/viber_image_2024-10-09_19-21-03-724.png" alt="">
+            </button>
+
+            <div class="desniDropdown" id="desniDropdown">
+                <button onclick="window.location.href='/pocetna stranica/main.html'">
+                    <span data-lang="me">Početna</span>
+                    <span data-lang="en">Home</span>
+                </button>
+                <button onclick="goToWeather()">
+                    <span data-lang="me">Vremenska prognoza</span>
+                    <span data-lang="en">Weather Forecast</span>
+                </button>
+                <button onclick="doIstorija()">
+                    <span data-lang="me">Istorija</span>
+                    <span data-lang="en">History</span>
+                </button>
+
+                <button onclick="window.location.href='/kartice/smjestaj/smjestaj.html'">
+                    <span data-lang="me">Smještaj</span>
+                    <span data-lang="en">Accommodation</span>
+                </button>
+                <!-- Add other navigation options here -->
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="opsteInformacije">
+            <div class="containerParagraf">
+                <h1 id="naslovGlavni">
+                    <span data-lang="me">Sport</span>
+                    <span data-lang="en">Sport</span>
+                </h1>
+                <p id="paragraf1">
+                    <span data-lang="me">
+                        U Tivtu radi nešto više od 40 amaterskih sportskih klubova, dva školska sportska društva i tri društva sportske rekreacije. Zastupljena su ukupno 24 različita sporta. Više od 30 klubova radi samostalno i u okviru republičkih saveza, a osam boćarskih klubova radi u okviru Boćarskog saveza opštine Tivat. Sjedište Boćarskog saveza Crne Gore upravo je u Tivtu.
+                    </span>
+                    <span data-lang="en">
+                        In Tivat, there are more than 40 amateur sports clubs, two school sports societies, and three sports recreation societies. A total of 24 different sports are represented. More than 30 clubs operate independently and within national associations, and eight bocce clubs operate within the Bocce Association of the Municipality of Tivat. The headquarters of the Bocce Association of Montenegro is located in Tivat.
+                    </span>
+                </p>
+            </div>
+    
+            <div class="containerSlika">
+                <img src="/slike/sport copy.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="kultura">
+            <h1 class="opstiNaslov" id="opstiNaslov">
+                <span data-lang="me">Sportski objekti:</span>
+                <span data-lang="en">Sports facilities:</span>
+            </h1>
+
+            <!-- Gradski stadion -->
+            <div class="centarZaKulturu">
+                <h2 class="naslov1" id="naslovx">
+                    <span data-lang="me">Gradski stadion:</span>
+                    <span data-lang="en">City Stadium:</span>
+                </h2>
+                <div class="msm">
+                    <img src="/slike/stadion.jpg" alt="">
+
+                    <div class="msp">
+                        <h1 id="a">
+                            <span data-lang="me">Gradski stadion</span>
+                            <span data-lang="en">City Stadium</span>
+                        </h1>
+                        <p id="b">
+                            <span data-lang="me">
+                                Gradski stadion je stadion FK Arsenala. Sastoji se od pomoćnog terena sa vještačkom travom i glavnog terena. Stadion se nalazi u sklopu velikog gradskog parka. Kapacitet mu je 300 ljudi.
+                            </span>
+                            <span data-lang="en">
+                                The City Stadium is the home of FK Arsenal. It consists of an auxiliary field with artificial grass and a main field. The stadium is located within the large city park. Its capacity is 300 people.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map1')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map1" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sportska dvorana Župa -->
+            <div class="muzejGalerija">
+                <h2 id="c">
+                    <span data-lang="me">Sportska dvorana Župa:</span>
+                    <span data-lang="en">Sports Hall Župa:</span>
+                </h2>
+
+                <div class="paliBorcix">
+                    <img src="/slike/zupa.jpg" alt="">
+
+                    <div class="paragraf3">
+                        <h1 id="d">
+                            <span data-lang="me">Sportska dvorana</span>
+                            <span data-lang="en">Sports Hall</span>
+                        </h1>
+                        <p id="e">
+                            <span data-lang="me">
+                                Sportska dvorana Župa je dvorana za više sportova. Nalazi se u Tivtu, u istoimenom naselju Župa, po kojoj je i dobila ime. Ona je dom rukometnom klubu Partizan i košarkaškom klubu Teodo. Ima kapacitet od 900 ljudi.
+                            </span>
+                            <span data-lang="en">
+                                Sports Hall Župa is a multi-sport arena located in Tivat, in the neighborhood of Župa, after which it was named. It is home to the handball club Partizan and the basketball club Teodo. It has a capacity of 900 people.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map2')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map2" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="opstiNaslov">
+                <span data-lang="me">Sportski klubovi:</span>
+                <span data-lang="en">Sports Clubs:</span>
+            </h1>
+
+            <!-- FK Arsenal -->
+            <div class="sidro">
+                <h2 id="f">
+                    <span data-lang="me">FK Arsenal:</span>
+                    <span data-lang="en">FK Arsenal:</span>
+                </h2>
+
+                <div class="sidrox">
+                    <img src="/slike/fka.webp" alt="">
+                    <div class="paragraf4">
+                        <h1 id="g">
+                            <span data-lang="me">FK Arsenal</span>
+                            <span data-lang="en">FK Arsenal</span>
+                        </h1>
+                        <p id="h">
+                            <span data-lang="me">
+                                FK Arsenal Tivat je fudbalski klub koji se trenutno takmiči u prvoj fudbalskoj ligi Crne Gore. Osnovan je 1912. godina. Najveći uspjeh kluba su kvalifikacije za UEFA Ligu konferencija.
+                            </span>
+                            <span data-lang="en">
+                                FK Arsenal Tivat is a football club currently competing in the Montenegrin First League. Founded in 1912, the club's greatest achievement is qualifying for the UEFA Conference League.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map3')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map3" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RK Partizan -->
+            <div class="brigada">
+                <h2 id="i">
+                    <span data-lang="me">RK Partizan:</span>
+                    <span data-lang="en">RK Partizan:</span>
+                </h2>
+
+                <div class="brigadax">
+                    <img src="/slike/rkp.jpg" alt="">
+                    <div class="paragraf5">
+                        <h1 id="j">
+                            <span data-lang="me">RK Partizan</span>
+                            <span data-lang="en">RK Partizan</span>
+                        </h1>
+                        <p id="k">
+                            <span data-lang="me">
+                                RK Partizan Tivat je rukometni klub koji se trenutno takmiči u prvoj rukometnoj ligi Crne Gore. Osnovan je 1949. godine. Najbolji uspjeh im je osvajanje prve rukometne lige.
+                            </span>
+                            <span data-lang="en">
+                                RK Partizan Tivat is a handball club currently competing in the Montenegrin First Handball League. Founded in 1949, their greatest achievement is winning the national league.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map4')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map4" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KK Teodo -->
+            <div class="rodoljubi">
+                <h2 id="l">
+                    <span data-lang="me">KK Teodo:</span>
+                    <span data-lang="en">KK Teodo:</span>
+                </h2>
+
+                <div class="rodoljubix">
+                    <img src="/slike/kkt.jpg" alt="">
+                    <div class="paragraf6">
+                        <h1 id="m">
+                            <span data-lang="me">KK Teodo</span>
+                            <span data-lang="en">KK Teodo</span>
+                        </h1>
+                        <p id="n">
+                            <span data-lang="me">
+                                KK Teodo je košarkaški klub koji se trenutno takmiči u A1 košarkaškoj ligi Crne Gore. Osnovan je 2005. godine. Najveći uspjeh kluba je nadmetanje u regionalnoj ABA ligi.
+                            </span>
+                            <span data-lang="en">
+                                KK Teodo is a basketball club currently competing in the Montenegrin A1 Basketball League. Founded in 2005, the club's greatest achievement is participating in the regional ABA League.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map5')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map5" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            <span data-lang="me">&copy; Mario Matijević i Matija Milanović</span>
+            <span data-lang="en">&copy; Mario Matijević and Matija Milanović</span>
+        </p>
+        <p>
+            <span data-lang="me">Kontakt: example@gmail.com</span>
+            <span data-lang="en">Contact: example@gmail.com</span>
+        </p>
+    </footer>
+
+    <!-- JavaScript files -->
+    <script src="/js funkcije/jezik.js"></script>
+    <script src="sport.js"></script>
+    <script src="/js funkcije/desniDropdown.js"></script>
+    <script src="/js funkcije/lijeviDropdown.js"></script>
+    <script src="/js funkcije/linkovi.js"></script>
+</body>
+</html>

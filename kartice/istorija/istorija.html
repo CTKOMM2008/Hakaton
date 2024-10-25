@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" data-language="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Istorija</title>
+    <link rel="stylesheet" href="./istorija.css">
+</head>
+<body>
+    <header>
+        <div class="lijevo">
+            <button class="dugmeNalog" onclick="toggleLeftDropdown()">
+                <img src="/slike/icons8-person-64.png" alt="" class="slikaNalog">
+            </button>
+
+            <div class="lijeviDropdown" id="lijeviDropdown">
+                <button onclick="logout()">
+                    <span data-lang="me">Odjavi se</span>
+                    <span data-lang="en">Log out</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="sredina">
+            <div class="vremenskaPrognoza" id="weatherIcon" onclick="goToWeather()" style="display: none;">
+                <img src="/ZaVrijeme/cloud-sun.svg" alt="">
+            </div>
+            
+            <h1 id="naslov1">
+                <span data-lang="me">Vodič kroz Tivat</span>
+                <span data-lang="en">Guide through Tivat</span>
+            </h1>
+
+            <button class="crnogorski" id="crnogorski" onclick="promijeniCrnogorski()">
+                <img src="/slike/Flag_of_Montenegro_(vertical).svg.png" alt="">
+            </button>
+
+            <button id="engleski" onclick="promijeniEngleski()">
+                <img src="/slike/1000_F_589649072_8cYn962oBUOGweawNfNcgPHfimA4JkzY.jpg" alt="">
+            </button>
+        </div>
+        
+        <div class="desno">
+            <button class="dugmeMenu" onclick="toggleRightDropdown()">
+                <img src="/slike/viber_image_2024-10-09_19-21-03-724.png" alt="">
+            </button>
+
+            <div class="desniDropdown" id="desniDropdown">
+                <button onclick="window.location.href='/pocetna stranica/main.html'">
+                    <span data-lang="me">Početna</span>
+                    <span data-lang="en">Home</span>
+                </button>
+
+                <button onclick="window.location.href='/kartice/smjestaj/smjestaj.html'">
+                    <span data-lang="me">Smještaj</span>
+                    <span data-lang="en">Accommodation</span>
+                </button>
+                <!-- Add other navigation options if needed -->
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="opsteInformacije">
+            <div class="containerParagraf">
+                <h1 id="naslovGlavni">
+                    <span data-lang="me">Istorija</span>
+                    <span data-lang="en">History</span>
+                </h1>
+                <p id="paragraf1">
+                    <span data-lang="me">
+                        Tivat je prema mišljenjima istoričara najmlađi grad u Boki Kotorskoj, pa i na Crnogorskom primorju, no i dalje ima veoma bogatu istoriju.
+                    </span>
+                    <span data-lang="en">
+                        According to historians, Tivat is the youngest town in the Bay of Kotor and the Montenegrin coast, yet it still has a very rich history.
+                    </span>
+                </p>
+    
+                <p id="paragraf2">
+                    <span data-lang="me">
+                        Prema javnosti poznatim podacima, prva epoha u razvoju Tivta koju karakteriše ilirski period, završava se 168-7. godine p.n.e. Iako o tom periodu danas svjedoči tek manji broj arheoloških nalaza, to vremensko razdoblje istorijski je bitno zbog činjenice da je tada propala ilirska država.
+                    </span>
+                    <span data-lang="en">
+                        According to publicly known data, the first epoch in Tivat's development characterized by the Illyrian period ends in 168-7 BC. Although only a small number of archaeological findings testify to that period today, this time frame is historically significant due to the fact that the Illyrian state collapsed then.
+                    </span>
+                </p>
+            </div>
+    
+            <div class="containerSlika">
+                <img src="/slike/istorija2.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="spomenici">
+            <h1 class="opstiNaslov" id="opstiNaslov">
+                <span data-lang="me">Spomenici:</span>
+                <span data-lang="en">Monuments:</span>
+            </h1>
+
+            <!-- Spomenik narodnim herojima Milanu Spasiću i Sergeju Mašeri -->
+            <div class="milanSergej">
+                <h1 class="naslov1" id="naslovx">
+                    <span data-lang="me">Spomenik narodnim herojima Milanu Spasiću i Sergeju Mašeri:</span>
+                    <span data-lang="en">Monument to National Heroes Milan Spasić and Sergej Mašera:</span>
+                </h1>
+                <div class="msm">
+                    <img src="/slike/danas-u-Tivtu_resize.jpg" alt="">
+
+                    <div class="msp">
+                        <h1 id="a">
+                            <span data-lang="me">Razarač "Zagreb"</span>
+                            <span data-lang="en">Destroyer "Zagreb"</span>
+                        </h1>
+                        <p id="b">
+                            <span data-lang="me">
+                                Potapanje razarača „Zagreb“ i pogibija te dvojice mornaričkih oficira. Spasić i Mašera su 17. aprila 1941, ne priznajući kapitulaciju Kraljevine Jugoslavije u Aprilskom ratu i odbivši naređenje da brod predaju neprijatelju, žrtvujući svoje živote, digli u vazduh razarač „Zagreb“ i sa njim potonuli u Tivatskom zalivu.
+                            </span>
+                            <span data-lang="en">
+                                The sinking of the destroyer "Zagreb" and the death of the two naval officers. On April 17, 1941, not recognizing the capitulation of the Kingdom of Yugoslavia in the April War and refusing the order to surrender the ship to the enemy, Spasić and Mašera sacrificed their lives by blowing up the destroyer "Zagreb" and sinking with it in the Bay of Tivat.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map1')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map1" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5889.450649761728!2d18.69307070665285!3d42.4335811695371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134c312c8be834ef%3A0xd0a221df1cd43e3a!2zRGVua21hbCBTcGFzacSHIHVuZCBNYXNlcmEgKNCh0L_QvtC80LXQvdC40Log0KHQv9Cw0YHQuNGb0YMg0Lgg0JzQsNGI0LXRgNC4KQ!5e0!3m2!1sen!2s!4v1729352923253!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spomenik palim borcima NOB-a -->
+            <div class="paliBorci">
+                <h2 id="c">
+                    <span data-lang="me">Spomenik palim borcima NOB-a:</span>
+                    <span data-lang="en">Monument to Fallen Fighters of the National Liberation War:</span>
+                </h2>
+
+                <div class="paliBorcix">
+                    <img src="/slike/paliborci.jpg" alt="">
+
+                    <div class="paragraf3">
+                        <h1 id="d">
+                            <span data-lang="me">4. Jul</span>
+                            <span data-lang="en">4th of July</span>
+                        </h1>
+                        <p id="e">
+                            <span data-lang="me">
+                                4. jul - Dan borca, koji proslavljamo u znak sjećanja na 4. jul 1941. godine, kada je Politbiro Centralnog komiteta KPJ, na čelu sa Josipom Brozom Titom, donio odluku o otpočinjanju oružanog ustanka naroda Jugoslavije protiv fašističkog okupatora. Narodi Jugoslavije su se masovno odazvali tom pozivu i krenuli u borbu protiv okupatora, u borbu za slobodu, koja je došla četiri godine kasnije.
+                            </span>
+                            <span data-lang="en">
+                                July 4th - Fighter's Day, which we celebrate in memory of July 4, 1941, when the Politburo of the Central Committee of the Communist Party of Yugoslavia, led by Josip Broz Tito, decided to start an armed uprising of the people of Yugoslavia against the fascist occupier. The peoples of Yugoslavia massively responded to that call and went into battle against the occupier, a fight for freedom that came four years later.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map2')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map2" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2944.7873537445653!2d18.69697196531302!3d42.4322609823316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134c31e32b8687e1%3A0x6783fcdc4e18988e!2sSpomenik%20Palim%20Borcima!5e0!3m2!1sen!2s!4v1729353187967!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spomenik stogodišnjice Arsenala -->
+            <div class="sidro">
+                <h2 id="f">
+                    <span data-lang="me">Spomenik stogodišnjice Arsenala:</span>
+                    <span data-lang="en">Monument of the Arsenal Centennial:</span>
+                </h2>
+
+                <div class="sidrox">
+                    <img src="/slike/arsenalupscaled.jpg" alt="">
+                    <div class="paragraf4">
+                        <h1 id="g">
+                            <span data-lang="me">Arsenal</span>
+                            <span data-lang="en">Arsenal</span>
+                        </h1>
+                        <p id="h">
+                            <span data-lang="me">
+                                Spomenik je podignut u čast 100 godina Mornaričko-tehničkog remontnog zavoda "Arsenal". Arsenal je otvoren 1889, a spomenik je podignut 100 godina kasnije, 1989.
+                            </span>
+                            <span data-lang="en">
+                                The monument was erected in honor of the 100th anniversary of the Naval Technical Repair Institute "Arsenal". The Arsenal was opened in 1889, and the monument was erected 100 years later, in 1989.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map3')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map3" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d736.2081967205146!2d18.69596326966689!3d42.43129398805115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDLCsDI1JzUyLjciTiAxOMKwNDEnNDcuOCJF!5e0!3m2!1sen!2s!4v1729354683668!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spomen ploča u čast iskrcavanja Mornaričke Pješadije 2. Dalmatinske Brigade -->
+            <div class="brigada">
+                <h2 id="i">
+                    <span data-lang="me">Spomen ploča u čast iskrcavanja Mornaričke Pješadije 2. Dalmatinske Brigade:</span>
+                    <span data-lang="en">Memorial Plaque Honoring the Landing of the Naval Infantry 2nd Dalmatian Brigade:</span>
+                </h2>
+
+                <div class="brigadax">
+                    <img src="/slike/brigada.jpg" alt="">
+                    <div class="paragraf5">
+                        <h1 id="j">
+                            <span data-lang="me">Iskrcavanje brigade</span>
+                            <span data-lang="en">Brigade Landing</span>
+                        </h1>
+                        <p id="k">
+                            <span data-lang="me">
+                                Spomen obilježje se nalazi na kući u mjestu Lepetane, podignuto u čast iskrcavanja Mornaričke Pješadije II Dalmatinske Brigade u Lepetanima 1944. godine. Lokacija je na proširenju neposredno uz pristanište za trajekte u Lepetanima.
+                            </span>
+                            <span data-lang="en">
+                                The memorial is located on a house in Lepetane, erected in honor of the landing of the Naval Infantry 2nd Dalmatian Brigade in Lepetane in 1944. The location is on an expansion area directly next to the ferry dock in Lepetane.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map4')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map4" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1168.0151163852497!2d18.68564086306254!3d42.465747685290765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDLCsDI3JzU2LjUiTiAxOMKwNDEnMDkuOCJF!5e0!3m2!1sen!2s!4v1729713272801!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spomen ploča obješenim rodoljubima -->
+            <div class="rodoljubi">
+                <h2 id="l">
+                    <span data-lang="me">Spomen ploča obješenim rodoljubima:</span>
+                    <span data-lang="en">Memorial Plaque to Hanged Patriots:</span>
+                </h2>
+
+                <div class="rodoljubix">
+                    <img src="/slike/radovic╠üi.jpg" alt="">
+                    <div class="paragraf6">
+                        <h1 id="m">
+                            <span data-lang="me">Pogibija rodoljuba</span>
+                            <span data-lang="en">Patriots' Execution</span>
+                        </h1>
+                        <p id="n">
+                            <span data-lang="me">
+                                Spomen obilježje se nalazi u mjestu Radovići, Krtole. Posvećeno je memoriji na stradale rodoljube koje su fašisti objesili dana 22. novembra 1943. godine na ovom mjestu.
+                            </span>
+                            <span data-lang="en">
+                                The memorial is located in Radovići, Krtole. It is dedicated to the memory of the fallen patriots whom the fascists hanged on November 22, 1943, at this place.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map5')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map5" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2083.4374120828697!2d18.67104086300598!3d42.397386029273626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDLCsDIzJzQ5LjgiTiAxOMKwNDAnMTYuNiJF!5e0!3m2!1sen!2s!4v1729713313171!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            <span data-lang="me">&copy; Mario Matijević i Matija Milanović</span>
+            <span data-lang="en">&copy; Mario Matijević and Matija Milanović</span>
+        </p>
+        <p>
+            <span data-lang="me">Kontakt: example@gmail.com</span>
+            <span data-lang="en">Contact: example@gmail.com</span>
+        </p>
+    </footer>
+
+    <!-- JavaScript files -->
+    <script src="/js funkcije/jezik.js"></script>
+    <script src="istorija.js"></script>
+    <script src="/js funkcije/desniDropdown.js"></script>
+    <script src="/js funkcije/lijeviDropdown.js"></script>
+    <script src="/js funkcije/linkovi.js"></script>
+    <script src="/login stranica/logout.js"></script>
+</body>
+</html>

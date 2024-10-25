@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-language="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vremenska Prognoza</title>
+    <link rel="stylesheet" href="./vrijeme.css">
+</head>
+<body>
+    <header>
+        <div class="lijevo">
+            <button class="dugmeNalog" onclick="toggleLeftDropdown()">
+                <img src="/slike/icons8-person-64.png" alt="" class="slikaNalog">
+            </button>
+
+            <div class="lijeviDropdown" id="lijeviDropdown">
+                <button onclick="logout()">
+                    <span data-lang="me">Odjavi se</span>
+                    <span data-lang="en">Log out</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="sredina">
+            <div class="vremenskaPrognoza" id="weatherIcon" style="display: none;">
+                <img src="/ZaVrijeme/cloud-sun.svg" alt="">
+            </div>
+            
+            <h1 id="naslov1">
+                <span data-lang="me">Vodič kroz Tivat</span>
+                <span data-lang="en">Guide through Tivat</span>
+            </h1>
+
+            <button class="crnogorski" id="crnogorski" onclick="promijeniCrnogorski()">
+                <img src="/slike/Flag_of_Montenegro_(vertical).svg.png" alt="">
+            </button>
+
+            <button id="engleski" onclick="promijeniEngleski()">
+                <img src="/slike/1000_F_589649072_8cYn962oBUOGweawNfNcgPHfimA4JkzY.jpg" alt="">
+            </button>
+        </div>
+        
+        <div class="desno">
+            <button class="dugmeMenu" onclick="toggleRightDropdown()">
+                <img src="/slike/viber_image_2024-10-09_19-21-03-724.png" alt="">
+            </button>
+
+            <div class="desniDropdown" id="desniDropdown">
+                <button onclick="window.location.href='../pocetna stranica/main.html'">
+                    <span data-lang="me">Početna</span>
+                    <span data-lang="en">Home</span>
+                </button>
+
+                <button onclick="window.location.href='/kartice/smjestaj/smjestaj.html'">
+                    <span data-lang="me">Smještaj</span>
+                    <span data-lang="en">Accommodation</span>
+                </button>
+                <!-- Add other navigation options if needed -->
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 id="naslovVrijeme">
+                <span data-lang="me">Trenutno vrijeme</span>
+                <span data-lang="en">Current Weather</span>
+            </h1>
+            <div class="search-bar">
+                <input type="text" id="locationInput" placeholder="Unesite mjesto / Enter location" name="input" value="Tivat">
+                <button id="searchButton">
+                    <span data-lang="me">Pretraži</span>
+                    <span data-lang="en">Search</span>
+                </button>
+            </div>
+            <div class="weather-info">
+                <h2 id="location">Tivat</h2>
+                <p id="temperature"></p>
+                <p id="description"></p>
+            </div>
+            <a href="/pocetna stranica/main.html" id="nazad">
+                <span data-lang="me">Nazad na početnu</span>
+                <span data-lang="en">Back to Home</span>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            <span data-lang="me">&copy; Mario Matijević i Matija Milanović</span>
+            <span data-lang="en">&copy; Mario Matijević and Matija Milanović</span>
+        </p>
+        <p>
+            <span data-lang="me">Kontakt: example@gmail.com</span>
+            <span data-lang="en">Contact: example@gmail.com</span>
+        </p>
+    </footer>
+
+    <!-- JavaScript files -->
+    <script src="/js funkcije/jezik.js"></script>
+    <script src="vrijeme.js"></script>
+    <script src="/js funkcije/desniDropdown.js"></script>
+    <script src="/js funkcije/lijeviDropdown.js"></script>
+    <script src="/js funkcije/linkovi.js"></script>
+    <script src="/login stranica/logout.js"></script>
+</body>
+</html>

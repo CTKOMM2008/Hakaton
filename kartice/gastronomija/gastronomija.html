@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" data-language="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastronomija</title>
+    <link rel="stylesheet" href="./gastronomija.css">
+</head>
+<body>
+    <header>
+        <div class="lijevo">
+            <button class="dugmeNalog" onclick="toggleLeftDropdown()">
+                <img src="/slike/icons8-person-64.png" alt="" class="slikaNalog">
+            </button>
+
+            <div class="lijeviDropdown" id="lijeviDropdown">
+                <button onclick="logout()">
+                    <span data-lang="me">Odjavi se</span>
+                    <span data-lang="en">Log out</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="sredina">
+            <div class="vremenskaPrognoza" id="weatherIcon" onclick="goToWeather()" style="display: none;">
+                <img src="/ZaVrijeme/cloud-sun.svg" alt="">
+            </div>
+            
+            <h1 id="naslov1">
+                <span data-lang="me">Vodič kroz Tivat</span>
+                <span data-lang="en">Guide through Tivat</span>
+            </h1>
+
+            <button class="crnogorski" id="crnogorski" onclick="promijeniCrnogorski()">
+                <img src="/slike/Flag_of_Montenegro_(vertical).svg.png" alt="">
+            </button>
+
+            <button id="engleski" onclick="promijeniEngleski()">
+                <img src="/slike/1000_F_589649072_8cYn962oBUOGweawNfNcgPHfimA4JkzY.jpg" alt="">
+            </button>
+        </div>
+        
+        <div class="desno">
+            <button class="dugmeMenu" onclick="toggleRightDropdown()">
+                <img src="/slike/viber_image_2024-10-09_19-21-03-724.png" alt="">
+            </button>
+
+            <div class="desniDropdown" id="desniDropdown">
+                <button onclick="window.location.href='/pocetna stranica/main.html'">
+                    <span data-lang="me">Početna</span>
+                    <span data-lang="en">Home</span>
+                </button>
+
+                <button onclick="window.location.href='/kartice/smjestaj/smjestaj.html'">
+                    <span data-lang="me">Smještaj</span>
+                    <span data-lang="en">Accommodation</span>
+                </button>
+                <!-- Add other navigation options if needed -->
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="opsteInformacije">
+            <div class="containerParagraf">
+                <h1 id="naslovGlavni">
+                    <span data-lang="me">Gastronomija</span>
+                    <span data-lang="en">Gastronomy</span>
+                </h1>
+                <p id="paragraf1">
+                    <span data-lang="me">
+                        Tivat ima bogat izbor kafića i restorana koji pružaju najkvalitetnije gastronomsko uživanje. Odlikuje se raznolikom kuhinjom, koja varira od domaće, mediteranske, sve do dalekih kontinenata kao što je Azija.
+                    </span>
+                    <span data-lang="en">
+                        Tivat has a rich selection of cafes and restaurants that offer the highest quality gastronomic enjoyment. It is characterized by a diverse cuisine, ranging from local, Mediterranean, to distant continents like Asia.
+                    </span>
+                </p>
+        
+                <p id="paragraf2">
+                    <span data-lang="me">
+                        Širom opštine postoje razni restorani koji služe različite vrste hrane.
+                    </span>
+                    <span data-lang="en">
+                        Throughout the municipality, there are various restaurants serving different types of food.
+                    </span>
+                </p>
+            </div>
+    
+            <div class="containerSlika">
+                <img src="/slike/hrana.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="spomenici">
+            <h1 class="opstiNaslov" id="opstiNaslov">
+                <span data-lang="me">Restorani:</span>
+                <span data-lang="en">Restaurants:</span>
+            </h1>
+
+            <!-- Gallardo -->
+            <div class="milanSergej">
+                <h2 class="naslov1" id="naslovx">
+                    <span data-lang="me">Gallardo:</span>
+                    <span data-lang="en">Gallardo:</span>
+                </h2>
+                <div class="msm">
+                    <img src="/slike/gallardo1.jpg" alt="">
+
+                    <div class="msp">
+                        <h1 id="a">
+                            <span data-lang="me">Restoran Gallardo</span>
+                            <span data-lang="en">Gallardo Restaurant</span>
+                        </h1>
+                        <p id="b">
+                            <span data-lang="me">
+                                Ovaj restoran se nalazi u Porto Montenegru u neposrednoj blizini hotela Regent. Ovo je steak restoran i odličan je izbor za ljubitelje BBQ-a.
+                            </span>
+                            <span data-lang="en">
+                                This restaurant is located in Porto Montenegro, in close proximity to the Regent Hotel. It is a steakhouse and an excellent choice for BBQ lovers.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map1')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map1" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2944.7621705504002!2d18.691740576156914!3d42.432796971186264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134c31a1ae5491c7%3A0xcf181f6c9987ea7f!2sGallardo!5e0!3m2!1sen!2s!4v1729791952038!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Big Ben -->
+            <div class="paliBorci">
+                <h2 id="c">
+                    <span data-lang="me">Big Ben:</span>
+                    <span data-lang="en">Big Ben:</span>
+                </h2>
+    
+                <div class="paliBorcix">
+                    <img src="/slike/bigben.jpeg" alt="">
+    
+                    <div class="paragraf3">
+                        <h1 id="d">
+                            <span data-lang="me">Restoran Big Ben</span>
+                            <span data-lang="en">Big Ben Restaurant</span>
+                        </h1>
+                        <p id="e">
+                            <span data-lang="me">
+                                Ovaj restoran nalazi se u Donjoj Lastvi na šetalištu. Nudi raznovrsan izbor hrane koji može zadovoljiti sve ljubitelje hrane. Ima raznovrstan meni na kojem se nalazi sve od morskih plodova do izvrsnih pizza.
+                            </span>
+                            <span data-lang="en">
+                                This restaurant is located in Donja Lastva on the promenade. It offers a diverse selection of food that can satisfy all food lovers. It has a varied menu featuring everything from seafood to excellent pizzas.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map2')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map2" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2944.3683830308555!2d18.684418176157283!3d42.44117747118554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134c310d178c8b3b%3A0x24c01432bca62f30!2sBig%20Ben!5e0!3m2!1sen!2s!4v1729792625339!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Al posto giusto -->
+            <div class="sidro">
+                <h2 id="f">
+                    <span data-lang="me">Al posto giusto:</span>
+                    <span data-lang="en">Al Posto Giusto:</span>
+                </h2>
+    
+                <div class="sidrox">
+                    <img src="/slike/alposto1.jpg" alt="">
+                    <div class="paragraf4">
+                        <h1 id="g">
+                            <span data-lang="me">Restoran Al Posto Giusto</span>
+                            <span data-lang="en">Al Posto Giusto Restaurant</span>
+                        </h1>
+                        <p id="h">
+                            <span data-lang="me">
+                                Ovaj restoran se nalazi u Porto Montenegru u neposrednoj blizini hotela Regent. Ova picerija je odličan izbor za ljubitelje italijanske pizze.
+                            </span>
+                            <span data-lang="en">
+                                This restaurant is located in Porto Montenegro, close to the Regent Hotel. This pizzeria is an excellent choice for lovers of Italian pizza.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map3')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map3" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2944.767089852847!2d18.691025476156838!3d42.43269227118627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134c3175f40ff9fb%3A0x5f4226abd74fd590!2sAl%20Posto%20Giusto!5e0!3m2!1sen!2s!4v1729792922458!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Volat -->
+            <div class="brigada">
+                <h2 id="i">
+                    <span data-lang="me">Lounge bar & restaurant Volat:</span>
+                    <span data-lang="en">Lounge Bar & Restaurant Volat:</span>
+                </h2>
+    
+                <div class="brigadax">
+                    <img src="/slike/volat.jpg" alt="">
+                    <div class="paragraf5">
+                        <h1 id="j">
+                            <span data-lang="me">Restoran Volat</span>
+                            <span data-lang="en">Volat Restaurant</span>
+                        </h1>
+                        <p id="k">
+                            <span data-lang="me">
+                                Ovaj restoran se nalazi pored šetališta Kalimanj. Nudi raznovrsan izbor hrane koji može zadovoljiti sve ljubitelje hrane.
+                            </span>
+                            <span data-lang="en">
+                                This restaurant is located next to the Kalimanj promenade. It offers a diverse selection of food that can satisfy all food enthusiasts.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map4')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map4" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2944.9405794205927!2d18.698154976156644!3d42.428999671186595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134c319cec2cf42b%3A0x2dd9a590d378ec5f!2sVolat%20Lounge%20Bar%20%26%20Restaurant!5e0!3m2!1sen!2s!4v1729793779240!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Spot at the Chedi -->
+            <div class="rodoljubi">
+                <h2 id="l">
+                    <span data-lang="me">The Spot at The Chedi:</span>
+                    <span data-lang="en">The Spot at The Chedi:</span>
+                </h2>
+    
+                <div class="rodoljubix">
+                    <img src="/slike/chedi.webp" alt="">
+                    <div class="paragraf6">
+                        <h1 id="m">
+                            <span data-lang="me">The Spot at The Chedi</span>
+                            <span data-lang="en">The Spot at The Chedi</span>
+                        </h1>
+                        <p id="n">
+                            <span data-lang="me">
+                                Ovaj restoran nalazi se u Luštici Bay. Ovaj skupocjeni restoran odlikuje se po kvalitetu ugostiteljstva. Takođe priređuje širok izbor hrane, sa različitim jelovnicima za svaki obrok.
+                            </span>
+                            <span data-lang="en">
+                                This restaurant is located in Luštica Bay. This expensive restaurant is distinguished by the quality of hospitality. It also offers a wide selection of food, with different menus for each meal.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map5')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map5" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1473.471567680631!2d18.661448769271384!3d42.38635784960741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134c2f003b61330b%3A0xe4854797faa0b74e!2sThe%20Spot%20at%20The%20Chedi%20Lustica%20Bay!5e0!3m2!1sen!2s!4v1729794471922!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            <span data-lang="me">&copy; Mario Matijević i Matija Milanović</span>
+            <span data-lang="en">&copy; Mario Matijević and Matija Milanović</span>
+        </p>
+        <p>
+            <span data-lang="me">Kontakt: example@gmail.com</span>
+            <span data-lang="en">Contact: example@gmail.com</span>
+        </p>
+    </footer>
+
+    <!-- JavaScript files -->
+    <script src="/js funkcije/jezik.js"></script>
+    <script src="gastronomija.js"></script>
+    <script src="/js funkcije/desniDropdown.js"></script>
+    <script src="/js funkcije/lijeviDropdown.js"></script>
+    <script src="/js funkcije/linkovi.js"></script>
+    <script src="/login stranica/logout.js"></script>
+</body>
+</html>

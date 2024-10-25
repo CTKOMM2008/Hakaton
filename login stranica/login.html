@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-language="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Register</title>
+    <link rel="stylesheet" href="./login-style.css">
+</head>
+<body>
+    <header>
+        <div class="lijevo">
+            <button class="dugmeNalog" onclick="handleProfileClick()">
+                <img src="/slike/icons8-person-64.png" alt="" class="slikaNalog">
+            </button>
+        </div>
+
+        <div class="sredina">
+            <div class="vremenskaPrognoza" id="weatherIcon" onclick="goToWeather()" style="display: none;">
+                <img src="/ZaVrijeme/cloud-sun.svg" alt="">
+            </div>
+            
+            <h1 id="naslov1">
+                <span data-lang="me">Prijava / Registracija</span>
+                <span data-lang="en">Login / Register</span>
+            </h1>
+
+            <button class="crnogorski" id="crnogorski" onclick="promijeniCrnogorski()">
+                <img src="/slike/Flag_of_Montenegro_(vertical).svg.png" alt="">
+            </button>
+
+            <button id="engleski" onclick="promijeniEngleski()">
+                <img src="/slike/1000_F_589649072_8cYn962oBUOGweawNfNcgPHfimA4JkzY.jpg" alt="">
+            </button>
+        </div>
+        
+        <div class="desno">
+            <button class="dugmeMenu" onclick="toggleRightDropdown()">
+                <img src="/slike/viber_image_2024-10-09_19-21-03-724.png" alt="">
+            </button>
+
+            <div class="desniDropdown" id="desniDropdown">
+                <button onclick="naPocetnu()">
+                    <span data-lang="me">Početna</span>
+                    <span data-lang="en">Home</span>
+                </button>
+                <!-- Add other navigation options if needed -->
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="login-container">
+            <form id="loginForm">
+                <h2>
+                    <span data-lang="me">Prijava</span>
+                    <span data-lang="en">Login</span>
+                </h2>
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">
+                    <span data-lang="me">Prijavi se</span>
+                    <span data-lang="en">Login</span>
+                </button>
+                <p id="registerLink">
+                    <span data-lang="me">Nemaš nalog? <a href="#" onclick="showRegister()">Registruj se</a></span>
+                    <span data-lang="en">Don't have an account? <a href="#" onclick="showRegister()">Register</a></span>
+                </p>
+            </form>
+
+            <form id="registerForm" style="display: none;">
+                <h2>
+                    <span data-lang="me">Registracija</span>
+                    <span data-lang="en">Register</span>
+                </h2>
+                <input type="text" id="newUsername" placeholder="Username" required>
+                <input type="password" id="newPassword" placeholder="Password" required>
+                <button type="submit">
+                    <span data-lang="me">Registruj se</span>
+                    <span data-lang="en">Register</span>
+                </button>
+                <p id="loginLink">
+                    <span data-lang="me">Već imaš nalog? <a href="#" onclick="showLogin()">Prijavi se</a></span>
+                    <span data-lang="en">Already have an account? <a href="#" onclick="showLogin()">Login</a></span>
+                </p>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            <span data-lang="me">&copy; Mario Matijević i Matija Milanović</span>
+            <span data-lang="en">&copy; Mario Matijević and Matija Milanović</span>
+        </p>
+        <p>
+            <span data-lang="me">Kontakt: example@gmail.com</span>
+            <span data-lang="en">Contact: example@gmail.com</span>
+        </p>
+    </footer>
+
+    <!-- JavaScript files -->
+    <script src="/js funkcije/jezik.js"></script>
+    <script src="login.js"></script>
+    <script src="/js funkcije/desniDropdown.js"></script>
+    <script src="/js funkcije/lijeviDropdown.js"></script>
+</body>
+</html>

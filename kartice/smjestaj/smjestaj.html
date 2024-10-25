@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" data-language="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Istorija</title>
+    <link rel="stylesheet" href="./smjestaj.css">
+</head>
+<body>
+    <header>
+        <div class="lijevo">
+            <button class="dugmeNalog" onclick="toggleLeftDropdown()">
+                <img src="/slike/icons8-person-64.png" alt="" class="slikaNalog">
+            </button>
+
+            <div class="lijeviDropdown" id="lijeviDropdown">
+                <button onclick="logout()">
+                    <span data-lang="me">Odjavi se</span>
+                    <span data-lang="en">Log out</span>
+                </button>
+            </div>
+            
+        </div>
+        </div>
+
+        <div class="sredina">
+            <div class="vremenskaPrognoza" id="weatherIcon" onclick="goToWeather()" style="display: none;">
+                <img src="/ZaVrijeme/cloud-sun.svg" alt="">
+            </div>
+            
+            <h1 id="naslov1">
+                <span data-lang="me">Vodič kroz Tivat</span>
+                <span data-lang="en">Guide through Tivat</span>
+            </h1>
+
+            <button class="crnogorski" id="crnogorski" onclick="promijeniCrnogorski()">
+                <img src="/slike/Flag_of_Montenegro_(vertical).svg.png" alt="">
+            </button>
+
+            <button id="engleski" onclick="promijeniEngleski()">
+                <img src="/slike/1000_F_589649072_8cYn962oBUOGweawNfNcgPHfimA4JkzY.jpg" alt="">
+            </button>
+        </div>
+        
+        <div class="desno">
+            <button class="dugmeMenu" onclick="toggleRightDropdown()">
+                <img src="/slike/viber_image_2024-10-09_19-21-03-724.png" alt="">
+            </button>
+
+            <div class="desniDropdown" id="desniDropdown">
+                <button onclick="window.location.href='/pocetna stranica/main.html'">
+                    <span data-lang="me">Početna</span>
+                    <span data-lang="en">Home</span>
+                </button>
+
+                <button onclick="window.location.href='/kartice/smjestaj/smjestaj.html'">
+                    <span data-lang="me">Smještaj</span>
+                    <span data-lang="en">Accommodation</span>
+                </button>
+                <!-- Add other navigation options if needed -->
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="opsteInformacije">
+            <div class="containerParagraf">
+                <h1 id="naslovGlavni">
+                    <span data-lang="me">Smještaj</span>
+                    <span data-lang="en">Accommodation</span>
+                </h1>
+                <p id="paragraf1">
+                    <span data-lang="me">
+                        Tivat se odlikuje po mnoštvu kvalitetnih hotela koji već godinama dobijaju najbolje ocjene stranih i domaćih turista. Fantastični spoj morkse obale i planinskih pejzaža čini Tivat neizbježnom lokacijom za boravak ljudi.
+                    </span>
+                    <span data-lang="en">
+                        Tivat is distinguished by the multitude of quality hotels that have been receiving the best ratings from foreign and domestic tourists for years. The fantastic combination of the coast and mountain scenery makes Tivat an inevitable location for people to stay.
+                    </span>
+                </p>
+    
+                <p id="paragraf2">
+                    <span data-lang="me">
+                        Sve vrste gostiju mogu doći da iskuse lijep život koji Tivat nudi i uz širok izbor smještaja mogu se sklopiti sa dušom grada i zavoljeti ga.
+                    </span>
+                    <span data-lang="en">
+                        All types of guests can come to experience the beautiful life that Tivat has to offer and with a wide selection of accommodation, they can connect with the soul of the city and fall in love with it.
+                    </span>
+                </p>
+            </div>
+    
+            <div class="containerSlika">
+                <img src="/slike/tvslika.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="spomenici">
+            <h1 class="opstiNaslov" id="opstiNaslov">
+                <span data-lang="me">Hoteli:</span>
+                <span data-lang="en">Hotels:</span>
+            </h1>
+
+            <div class="milanSergej">
+                <h1 class="naslov1" id="naslovx">
+                    <span data-lang="me">Hotel Regent:</span>
+                    <span data-lang="en">Hotel Regent:</span>
+                </h1>
+                <div class="msm">
+                    <img src="/slike/regent.jpg" alt="">
+
+                    <div class="msp">
+                        <h1 id="a">
+                            <span data-lang="me">Hotel Regent"</span>
+                            <span data-lang="en">Hotel Regent</span>
+                        </h1>
+                        <p id="b">
+                            <span data-lang="me">
+                                Smješten u Bokokotorskom zalivu koji je pod zaštitom UNESCO-a, unutar luksuznog Porto Montenegro selu u gradu Tivtu, Regent Porto Montenegro & Residences nudi vanjski bazen, kao i spa i wellness centar.
+                            </span>
+                            <span data-lang="en">
+                                Located in the UNESCO-protected Bay of Kotor, within the luxurious Porto Montenegro Village in the town of Tivat, Regent Porto Montenegro & Residences offers an outdoor pool, as well as a spa and wellness center.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map1')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map1" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9641.473430816272!2d18.69055909488607!3d42.43316586940404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134c3175e9fd6733%3A0x2aa538348d596c71!2sRegent%20Porto%20Montenegro!5e0!3m2!1sen!2s!4v1729868174336!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="paliBorci">
+                <h2 id="c">
+                    <span data-lang="me">Hotel Pine:</span>
+                    <span data-lang="en">Hotel Pine:</span>
+                </h2>
+
+                <div class="paliBorcix">
+                    <img src="/slike/pine.jpg" alt="">
+
+                    <div class="paragraf3">
+                        <h1 id="d">
+                            <span data-lang="me">Hotel Pine</span>
+                            <span data-lang="en">Hotel Pine</span>
+                        </h1>
+                        <p id="e">
+                            <span data-lang="me">
+                                Ovaj hotel nalazi se na gradskoj rivi Tivta- Pinama. Kategorisan je sa 4 zvjezdice.
+                            </span>
+                            <span data-lang="en">
+                                This hotel is located on the Tivat Pine city waterfront. It is categorized with 4 stars.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map2')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map2" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5799.715259738604!2d18.691091578411083!3d42.43048437163648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134c319dc7002125%3A0x6189bb77c3368d52!2sHotel%20Pine%2C%20Culture%20Square%2C%20Tivat%2C%20Montenegro!5e0!3m2!1sen!2s!4v1729868257910!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidro">
+                <h2 id="f">
+                    <span data-lang="me">Hotel Palma:</span>
+                    <span data-lang="en">Hotel Palma:</span>
+                </h2>
+
+                <div class="sidrox">
+                    <img src="/slike/plaza-hotela-palma.jpg" alt="">
+                    <div class="paragraf4">
+                        <h1 id="g">
+                            <span data-lang="me">Hotel Palma</span>
+                            <span data-lang="en">Hotel Palma</span>
+                        </h1>
+                        <p id="h">
+                            <span data-lang="me">
+                                Hotel Palma, kategorisan sa četiri zvijezdice, nalazi se na samoj obali mora, u srcu Tivta, sa predivnim pogledom na Tivatski zaliv.
+                            </span>
+                            <span data-lang="en">
+                                Hotel Palma, categorized with four stars, is located right on the seashore, in the heart of Tivat, with a beautiful view of the Tivat Bay.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map3')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map3" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4674.871459923741!2d18.69503510569394!3d42.428063533506915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134c319cc6b296a3%3A0x114c6437950e9fe2!2sHotel%20Palma!5e0!3m2!1sen!2s!4v1729868319241!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="brigada">
+                <h2 id="i">
+                    <span data-lang="me">Hotel La Roche:</span>
+                    <span data-lang="en">Hotel La Roche:</span>
+                </h2>
+
+                <div class="brigadax">
+                    <img src="/slike/laroche.jpg" alt="">
+                    <div class="paragraf5">
+                        <h1 id="j">
+                            <span data-lang="me">Hotel La Roche</span>
+                            <span data-lang="en">Hotel La Roche</span>
+                        </h1>
+                        <p id="k">
+                            <span data-lang="me">
+                                Hotel La Roche je smješten na samo nekoliko koraka od mora. U pitanju je hotel koji je sinonim za hedonizam i zadovoljstvo i posebnu pažnju poklanja svakom gostu. Sagradjen je u klasičnom stilu sa modernim i luksuznim sizajnom enterijera u kome svi uživaju.
+                            </span>
+                            <span data-lang="en">
+                                Hotel La Roche is located just a few steps from the sea. It is a hotel that is synonymous with hedonism and pleasure and pays special attention to every guest. It is built in a classic style with a modern and luxurious interior design that everyone enjoys.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map4')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map4" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7449.434047300605!2d18.69547827336683!3d42.42884736353592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134c319cec2cf5ad%3A0x941d6745efe9eee1!2sHotel%20La%20Roche!5e0!3m2!1sen!2s!4v1729868411921!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rodoljubi">
+                <h2 id="l">
+                    <span data-lang="me">Hotel the Chedi:</span>
+                    <span data-lang="en">Hotel the Chedi:</span>
+                </h2>
+
+                <div class="rodoljubix">
+                    <img src="/slike/chedi.webp" alt="">
+                    <div class="paragraf6">
+                        <h1 id="m">
+                            <span data-lang="me">Hotel The Chedi</span>
+                            <span data-lang="en">Hotel The Chedi</span>
+                        </h1>
+                        <p id="n">
+                            <span data-lang="me">
+                                Hotel The Chedi Luštica Bay se nalazi pored mora u zalivu Trašte, na 14 km od centra Tivta i nudi privatnu plažu i bazen na otvorenom. Moderno uređene sobe i suite jedinice imaju pogled na planinu ili more.
+                            </span>
+                            <span data-lang="en">
+                                The Chedi Luštica Bay Hotel is located by the sea in Trašte Bay, 14 km from the center of Tivat and offers a private beach and outdoor pool. Modernly decorated rooms and suites have a view of the mountain or the sea.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map5')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map5" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7628.674581253953!2d18.66121961468927!3d42.386747513304144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134c2fccb88793af%3A0x753311f88b104167!2sThe%20Chedi%20Lu%C5%A1tica%20Bay!5e0!3m2!1sen!2s!4v1729868519678!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            <span data-lang="me">&copy; Mario Matijević i Matija Milanović</span>
+            <span data-lang="en">&copy; Mario Matijević and Matija Milanović</span>
+        </p>
+        <p>
+            <span data-lang="me">Kontakt: example@gmail.com</span>
+            <span data-lang="en">Contact: example@gmail.com</span>
+        </p>
+    </footer>
+
+    <!-- JavaScript files -->
+    <script src="/js funkcije/jezik.js"></script>
+    <script src="istorija.js"></script>
+    <script src="/js funkcije/desniDropdown.js"></script>
+    <script src="/js funkcije/lijeviDropdown.js"></script>
+    <script src="/js funkcije/linkovi.js"></script>
+    <script src="smjestaj.js"></script>
+    <script src="/login stranica/logout.js"></script>
+    <script src="/login stranica/logout.js"></script>
+</body>
+</html>

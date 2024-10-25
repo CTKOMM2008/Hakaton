@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" data-language="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nautika</title>
+    <link rel="stylesheet" href="./nautika.css">
+</head>
+<body>
+    <header>
+        <div class="lijevo">
+            <button class="dugmeNalog" onclick="toggleLeftDropdown()">
+                <img src="/slike/icons8-person-64.png" alt="" class="slikaNalog">
+            </button>
+
+            <div class="lijeviDropdown" id="lijeviDropdown">
+                <button onclick="logout()">
+                    <span data-lang="me">Odjavi se</span>
+                    <span data-lang="en">Log out</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="sredina">
+            <div class="vremenskaPrognoza" id="weatherIcon" onclick="goToWeather()" style="display: none;">
+                <img src="/ZaVrijeme/cloud-sun.svg" alt="">
+            </div>
+            
+            <h1 id="naslov1">
+                <span data-lang="me">Vodič kroz Tivat</span>
+                <span data-lang="en">Guide through Tivat</span>
+            </h1>
+
+            <button class="crnogorski" id="crnogorski" onclick="promijeniCrnogorski()">
+                <img src="/slike/Flag_of_Montenegro_(vertical).svg.png" alt="">
+            </button>
+
+            <button id="engleski" onclick="promijeniEngleski()">
+                <img src="/slike/1000_F_589649072_8cYn962oBUOGweawNfNcgPHfimA4JkzY.jpg" alt="">
+            </button>
+        </div>
+        
+        <div class="desno">
+            <button class="dugmeMenu" onclick="toggleRightDropdown()">
+                <img src="/slike/viber_image_2024-10-09_19-21-03-724.png" alt="">
+            </button>
+
+            <div class="desniDropdown" id="desniDropdown">
+                <button onclick="window.location.href='/pocetna stranica/main.html'">
+                    <span data-lang="me">Početna</span>
+                    <span data-lang="en">Home</span>
+                </button>
+
+                <button onclick="window.location.href='/kartice/smjestaj/smjestaj.html'">
+                    <span data-lang="me">Smještaj</span>
+                    <span data-lang="en">Accommodation</span>
+                </button>
+                <!-- Add other navigation options if needed -->
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="opsteInformacije">
+            <div class="containerParagraf">
+                <h1 id="naslovGlavni">
+                    <span data-lang="me">Nautika</span>
+                    <span data-lang="en">Nautics</span>
+                </h1>
+                <p id="paragraf1">
+                    <span data-lang="me">
+                        Tivat je primorski grad sa dobrom geostrateškom pozicijom i samim tim je nautika uvijek bila veoma razvijena u gradu. Kroz svoju istoriju igrao je veliku ulogu kao ratni arsenal, a danas je marina za luksuzne jahte, glisere i ostala prestižna plovila.
+                    </span>
+                    <span data-lang="en">
+                        Tivat is a coastal town with a good geostrategic position, and thus nautics has always been very developed in the city. Throughout its history, it played a significant role as a naval arsenal, and today it is a marina for luxury yachts, speedboats, and other prestigious vessels.
+                    </span>
+                </p>
+    
+                <p id="paragraf2">
+                    <span data-lang="me">
+                        Danas najviše pažnje privlači Porto Montenegro kao luksuzna marina, to jest pristanište za strane turiste i mjesto u kojem, pored pristajanja, mogu i odmoriti, pa i živjeti.
+                    </span>
+                    <span data-lang="en">
+                        Today, Porto Montenegro attracts the most attention as a luxury marina, serving as a docking place for foreign tourists and a location where they can not only dock but also rest and even live.
+                    </span>
+                </p>
+            </div>
+    
+            <div class="containerSlika">
+                <img src="/slike/nautika.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="kultura">
+            <h1 class="opstiNaslov" id="opstiNaslov">
+                <span data-lang="me">Istorija nautike:</span>
+                <span data-lang="en">History of Nautics:</span>
+            </h1>
+
+            <!-- Arsenal -->
+            <div class="centarZaKulturu">
+                <h2 class="naslov1" id="naslovx">
+                    <span data-lang="me">Arsenal:</span>
+                    <span data-lang="en">Arsenal:</span>
+                </h2>
+                <div class="msm">
+                    <img src="/slike/arsenal.jpeg" alt="">
+
+                    <div class="msp">
+                        <h1 id="a">
+                            <span data-lang="me">Arsenal</span>
+                            <span data-lang="en">Arsenal</span>
+                        </h1>
+                        <p id="b">
+                            <span data-lang="me">
+                                1886. godine uočena je strateška povoljnost Tivta za izgradnju pomorskog arsenala. Komanda mornarice Austrougarske je 1888. godine otpočela otkup zemljišta i pripremne radove na njegovom nivelisanju. U interesu razvoja grada, Tivatska opština je 1889. godine donijela odluku da se Komandi austrougarske ratne mornarice besplatno ustupi zemljište za izgradnju arsenala, u kojem su mještani trebali imati prvenstvo zaposlenja.
+                            </span>
+                            <span data-lang="en">
+                                In 1886, the strategic advantage of Tivat for building a naval arsenal was recognized. The Austro-Hungarian Navy Command began purchasing land and preparatory leveling work in 1888. In the interest of city development, the Municipality of Tivat decided in 1889 to grant land free of charge to the Austro-Hungarian Navy Command for the construction of the arsenal, where locals were to have employment priority.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map1')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map1" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1472.4087387617458!2d18.695328423306687!3d42.43161983287717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1729802852770!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stare podmornice -->
+            <div class="muzejGalerija">
+                <h2 id="c">
+                    <span data-lang="me">Stare podmornice:</span>
+                    <span data-lang="en">Old Submarines:</span>
+                </h2>
+
+                <div class="paliBorcix">
+                    <img src="/slike/podmornice.jpg" alt="">
+
+                    <div class="paragraf3">
+                        <h1 id="d">
+                            <span data-lang="me">Stare podmornice</span>
+                            <span data-lang="en">Old Submarines</span>
+                        </h1>
+                        <p id="e">
+                            <span data-lang="me">
+                                U sjeverozapadnom dijelu nautičko-turističkog centra Porto Montenegro u Tivtu, na platou ispred Zbirke pomorskog nasljeđa, nalazi se najveći i najatraktivniji muzejski eksponat ove kolekcije - velika, tzv. dizel-električna podmornica P-821 “Heroj” nekadašnje Jugoslovenske Ratne Mornarice (JRM). Uz "Heroja" je izložena i takozvana diverzantska podmornica "Una".
+                            </span>
+                            <span data-lang="en">
+                                In the northwest part of the nautical-tourist center Porto Montenegro in Tivat, on the plateau in front of the Maritime Heritage Collection, lies the largest and most attractive museum exhibit of this collection—the large diesel-electric submarine P-821 "Heroj" of the former Yugoslav Navy. Alongside "Heroj," the diver submarine "Una" is also exhibited.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map2')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map2" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1472.2764845243378!2d18.691292703151714!3d42.43724931879106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134c31429fa85433%3A0x822d3d664a1d54f9!2sPodmornica%20P%20-821!5e0!3m2!1sen!2s!4v1729803476012!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="opstiNaslov">
+                <span data-lang="me">Današnja nautika:</span>
+                <span data-lang="en">Today's Nautics:</span>
+            </h1>
+
+            <!-- Muzej nautičkog nasljeđa -->
+            <div class="sidro">
+                <h2 id="f">
+                    <span data-lang="me">Muzej nautičkog nasljeđa:</span>
+                    <span data-lang="en">Maritime Heritage Museum:</span>
+                </h2>
+
+                <div class="sidrox">
+                    <img src="/slike/ponaslede.jpg" alt="">
+                    <div class="paragraf4">
+                        <h1 id="g">
+                            <span data-lang="me">Nautički muzej</span>
+                            <span data-lang="en">Maritime Museum</span>
+                        </h1>
+                        <p id="h">
+                            <span data-lang="me">
+                                Smješten u restauriranoj pilani iz 19. vijeka, Muzej nautičkog nasljeđa Porto Montenegra slavi bogatu pomorsku istoriju Tivta, sa više od 300 eksponata, uključujući rijetku austrougarsku pomorsku opremu i mašine i par autentičnih jugoslovenskih podmornica. Posebne tematske izložbe održavaju se tokom cijele godine. Muzej se nalazi na sjevernom kraju sela Porto Montenegro.
+                            </span>
+                            <span data-lang="en">
+                                Located in a restored 19th-century sawmill, the Porto Montenegro Maritime Heritage Museum celebrates Tivat's rich maritime history, featuring over 300 exhibits, including rare Austro-Hungarian naval equipment and machinery, and a couple of authentic Yugoslav submarines. Special thematic exhibitions are held throughout the year. The museum is located at the northern end of the Porto Montenegro village.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map3')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map3" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1472.2764845243378!2d18.691292703151714!3d42.43724931879106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134c3173f15c63f9%3A0xeba2b235ca5ffe69!2sNaval%20Heritage%20Collection%20Museum!5e0!3m2!1sen!2s!4v1729803818963!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Porto Montenegro -->
+            <div class="brigada">
+                <h2 id="i">
+                    <span data-lang="me">Porto Montenegro:</span>
+                    <span data-lang="en">Porto Montenegro:</span>
+                </h2>
+
+                <div class="brigadax">
+                    <img src="/slike/porto.webp" alt="">
+                    <div class="paragraf5">
+                        <h1 id="j">
+                            <span data-lang="me">Porto Montenegro</span>
+                            <span data-lang="en">Porto Montenegro</span>
+                        </h1>
+                        <p id="k">
+                            <span data-lang="me">
+                                Porto Montenegro je luksuzna marina za jahte i nautičko naselje koje se nalazi u Tivtu. U kompleksu se nalazi marina (450 vezova za jahte dužine od 12 do 250 metara), rezidencije, poslovni prostori, Hotel "Regent" sa 5 zvjezdica, Zbirka pomorskog nasleđa sa vrijednim muzejskim eksponatima, smještena u rekonstruisanoj zgradi nekada Austrougarske pilane, Jaht klub, Međunarodna škola "Knightsbridge School International Montenegro".
+                            </span>
+                            <span data-lang="en">
+                                Porto Montenegro is a luxury yacht marina and nautical village located in Tivat. The complex includes a marina (450 berths for yachts ranging from 12 to 250 meters), residences, commercial spaces, the 5-star "Regent" Hotel, a Maritime Heritage Collection with valuable museum exhibits housed in a reconstructed former Austro-Hungarian sawmill, a yacht club, and the "Knightsbridge School International Montenegro".
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map4')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map4" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2944.626686183414!2d18.690707376157008!3d42.435680471186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134c3175cd38e169%3A0x47c2ab402ef225f1!2sPorto%20Montenegro!5e0!3m2!1sen!2s!4v1729803979185!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Luštica Bay -->
+            <div class="rodoljubi">
+                <h2 id="l">
+                    <span data-lang="me">Luštica Bay:</span>
+                    <span data-lang="en">Luštica Bay:</span>
+                </h2>
+
+                <div class="rodoljubix">
+                    <img src="/slike/lustica.jpg" alt="">
+                    <div class="paragraf6">
+                        <h1 id="m">
+                            <span data-lang="me">Luštica Bay</span>
+                            <span data-lang="en">Luštica Bay</span>
+                        </h1>
+                        <p id="n">
+                            <span data-lang="me">
+                                Luštica Bay je luksuzna marina za jahte i selo-marina koje se nalazi na poluostrvu Luštica u opštini Tivat. Sastoji se od marine, rezidencija, poslovnih prostora, prodavnica, hotela, privatnih bazena koji su namijenjeni za posjetioce mjesta.
+                            </span>
+                            <span data-lang="en">
+                                Luštica Bay is a luxury yacht marina and marina village located on the Luštica peninsula in the municipality of Tivat. It consists of a marina, residences, commercial spaces, shops, hotels, and private pools intended for visitors.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map5')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map5" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7716.82098352089!2d18.65784468618091!3d42.390769364070465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134c2e2c57880219%3A0x43e463771f653d5!2sLu%C5%A1tica%20Bay!5e0!3m2!1sen!2s!4v1729804373262!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            <span data-lang="me">&copy; Mario Matijević i Matija Milanović</span>
+            <span data-lang="en">&copy; Mario Matijević and Matija Milanović</span>
+        </p>
+        <p>
+            <span data-lang="me">Kontakt: example@gmail.com</span>
+            <span data-lang="en">Contact: example@gmail.com</span>
+        </p>
+    </footer>
+
+    <!-- JavaScript files -->
+    <script src="/js funkcije/jezik.js"></script>
+    <script src="nautika.js"></script>
+    <script src="/js funkcije/desniDropdown.js"></script>
+    <script src="/js funkcije/lijeviDropdown.js"></script>
+    <script src="/js funkcije/linkovi.js"></script>
+    <script src="/login stranica/logout.js"></script>
+</body>
+</html>

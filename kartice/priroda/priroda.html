@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" data-language="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priroda</title>
+    <link rel="stylesheet" href="./priroda.css">
+</head>
+<body>
+    <header>
+        <div class="lijevo">
+            <button class="dugmeNalog" onclick="toggleLeftDropdown()">
+                <img src="/slike/icons8-person-64.png" alt="" class="slikaNalog">
+            </button>
+
+            <div class="lijeviDropdown" id="lijeviDropdown">
+                <button onclick="logout()">
+                    <span data-lang="me">Odjavi se</span>
+                    <span data-lang="en">Log out</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="sredina">
+            <div class="vremenskaPrognoza" id="weatherIcon" onclick="goToWeather()" style="display: none;">
+                <img src="/ZaVrijeme/cloud-sun.svg" alt="">
+            </div>
+            
+            <h1 id="naslov1">
+                <span data-lang="me">Vodič kroz Tivat</span>
+                <span data-lang="en">Guide through Tivat</span>
+            </h1>
+
+            <button class="crnogorski" id="crnogorski" onclick="promijeniCrnogorski()">
+                <img src="/slike/Flag_of_Montenegro_(vertical).svg.png" alt="">
+            </button>
+
+            <button id="engleski" onclick="promijeniEngleski()">
+                <img src="/slike/1000_F_589649072_8cYn962oBUOGweawNfNcgPHfimA4JkzY.jpg" alt="">
+            </button>
+        </div>
+        
+        <div class="desno">
+            <button class="dugmeMenu" onclick="toggleRightDropdown()">
+                <img src="/slike/viber_image_2024-10-09_19-21-03-724.png" alt="">
+            </button>
+
+            <div class="desniDropdown" id="desniDropdown">
+                <button onclick="window.location.href='/pocetna stranica/main.html'">
+                    <span data-lang="me">Početna</span>
+                    <span data-lang="en">Home</span>
+                </button>
+
+                <button onclick="window.location.href='/kartice/smjestaj/smjestaj.html'">
+                    <span data-lang="me">Smještaj</span>
+                    <span data-lang="en">Accommodation</span>
+                </button>
+                <!-- Add other navigation options if needed -->
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="opsteInformacije">
+            <div class="containerParagraf">
+                <h1 id="naslovGlavni">
+                    <span data-lang="me">Priroda</span>
+                    <span data-lang="en">Nature</span>
+                </h1>
+                <p id="paragraf1">
+                    <span data-lang="me">
+                        Tivat je smješten u centralnom dijelu Boke Kotorske. Sa sjevera je zaštićen planinom Lovćen (1749 m) i lovćenskim ogrankom Vrmcem (710 m). Tivatski zaliv je kroz tjesnac Verige povezan sa Risanskim i Kotorskim zalivom.
+                    </span>
+                    <span data-lang="en">
+                        Tivat is located in the central part of the Bay of Kotor. It is protected from the north by Mount Lovćen (1749 m) and its branch Vrmac (710 m). The Bay of Tivat is connected to the Bays of Risan and Kotor through the Verige strait.
+                    </span>
+                </p>
+    
+                <p id="paragraf2">
+                    <span data-lang="me">
+                        Tivat odlikuje tipična mediteranska klima, sa blagim, kišovitim zimama i vedrim i toplim ljetima. Srednja godišnja temperatura vazduha je 15 stepeni Celzijusovih. U Tivtu u prosjeku ima 115 dana u godini sa temperaturom većom od 30°C. Tivat se smatra i najsunčanijim gradom Boke Kotorske, prosječno sa 240 sunčanih dana u godini.
+                    </span>
+                    <span data-lang="en">
+                        Tivat features a typical Mediterranean climate, with mild, rainy winters and clear, warm summers. The average annual air temperature is 15 degrees Celsius. In Tivat, there are on average 115 days a year with temperatures above 30°C. Tivat is considered the sunniest town in the Bay of Kotor, averaging 240 sunny days a year.
+                    </span>
+                </p>
+            </div>
+    
+            <div class="containerSlika">
+                <img src="/slike/priroda1.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="spomenici">
+            <h1 class="opstiNaslov" id="opstiNaslov">
+                <span data-lang="me">Parkovi i rezervati prirode:</span>
+                <span data-lang="en">Parks and Nature Reserves:</span>
+            </h1>
+
+            <!-- Park prirode Vrmac -->
+            <div class="milanSergej">
+                <h2 class="naslov1" id="naslovx">
+                    <span data-lang="me">Park prirode Vrmac:</span>
+                    <span data-lang="en">Nature Park Vrmac:</span>
+                </h2>
+                <div class="msm">
+                    <img src="/slike/vrmac.jpg" alt="">
+
+                    <div class="msp">
+                        <h1 id="a">
+                            <span data-lang="me">Vrmac</span>
+                            <span data-lang="en">Vrmac</span>
+                        </h1>
+                        <p id="b">
+                            <span data-lang="me">
+                                Vrmac je planina i poluostrvo u Crnoj Gori iznad Boke Kotorske. Njen najveći vrh je Sveti Ilija visok 766 metara. Ostali vrhovi su Velji vrh (712 m), Čisti vrh (616 m), Popova Glava (584 m) i Sveti Vid (440 m). Park se sastoji od guste šume i posjeduje raznolik živi svijet. Odlična je destinacija za ljubitelje prirode i kampere.
+                            </span>
+                            <span data-lang="en">
+                                Vrmac is a mountain and peninsula in Montenegro above the Bay of Kotor. Its highest peak is Sveti Ilija at 766 meters. Other peaks include Velji vrh (712 m), Čisti vrh (616 m), Popova Glava (584 m), and Sveti Vid (440 m). The park consists of dense forests and hosts diverse wildlife. It is an excellent destination for nature lovers and campers.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map1')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map1" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11775.815209302116!2d18.709700266390428!3d42.44999903895151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134c33e6c2a08f47%3A0x69ade10f77bff1e1!2sVrmac!5e0!3m2!1sen!2s!4v1729796673300!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rezervat prirode Solila -->
+            <div class="paliBorci">
+                <h2 id="c">
+                    <span data-lang="me">Rezervat prirode Solila:</span>
+                    <span data-lang="en">Nature Reserve Solila:</span>
+                </h2>
+
+                <div class="paliBorcix">
+                    <img src="/slike/solila.jpg" alt="">
+
+                    <div class="paragraf3">
+                        <h1 id="d">
+                            <span data-lang="me">Solila</span>
+                            <span data-lang="en">Solila</span>
+                        </h1>
+                        <p id="e">
+                            <span data-lang="me">
+                                Tivatska solila smještena su u obalnom pojasu Tivatskog zaliva (Boka Kotorska), Crna Gora. Ovo područje je nekada korišćeno kao solana. Solila su 2008. godine zaštićena kao poseban rezervat prirode, radi očuvanja rijetkih, prorijeđenih i ugroženih biljnih i životinjskih vrsta, prevashodno ornitofaune i biljnih zajednica.
+                            </span>
+                            <span data-lang="en">
+                                The Tivat Saline is located in the coastal area of the Bay of Tivat (Bay of Kotor), Montenegro. This area was once used as a salt pan. In 2008, Solila was protected as a special nature reserve to preserve rare, depleted, and endangered plant and animal species, primarily bird fauna and plant communities.
+                            </span>
+                        </p>
+                        <button class="mapButton" onclick="toggleMap('map2')">
+                            <span data-lang="me">Prikaži mapu</span>
+                            <span data-lang="en">Show Map</span>
+                        </button>
+                        <div id="map2" class="mapContainer">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11786.734688620701!2d18.715911386019613!3d42.391884740824416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134c3201707b9b89%3A0xd8bac3d0bf1bd33!2sSolila%20-%20Special%20nature%20reserve%2C%20Montenegro!5e0!3m2!1sen!2s!4v1729796786259!5m2!1sen!2s" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            <span data-lang="me">&copy; Mario Matijević i Matija Milanović</span>
+            <span data-lang="en">&copy; Mario Matijević and Matija Milanović</span>
+        </p>
+        <p>
+            <span data-lang="me">Kontakt: example@gmail.com</span>
+            <span data-lang="en">Contact: example@gmail.com</span>
+        </p>
+    </footer>
+
+    <!-- JavaScript files -->
+    <script src="/js funkcije/jezik.js"></script>
+    <script src="priroda.js"></script>
+    <script src="/js funkcije/desniDropdown.js"></script>
+    <script src="/js funkcije/lijeviDropdown.js"></script>
+    <script src="/js funkcije/linkovi.js"></script>
+    <script src="/login stranica/logout.js"></script>
+</body>
+</html>
